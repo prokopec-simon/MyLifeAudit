@@ -1,3 +1,4 @@
+import { db } from '$lib/db';
 import { router, publicProcedure } from '../trpc';
 import { z } from 'zod';
 
@@ -8,8 +9,12 @@ export const appRouter = router({
 				name: z.string().optional(),
 			})
 		)
-		.query(({ input }) => {
-			return `Hello, ${input.name ?? 'world'}!`;
+		.query(async ({ input }) => {
+			const res = await db
+				.selectFrom('Example')
+				.select(['Example.id'])
+				.executeTakeFirst();
+			return `Hello, ${(input.name! + res!.id!) ?? 'world'}!`;
 		}),
 });
 
