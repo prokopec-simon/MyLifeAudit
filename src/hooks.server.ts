@@ -10,7 +10,7 @@ import { prisma } from './lib/server/prisma';
 // const prisma = new PrismaClient();
 
 export const handle = SvelteKitAuth({
-	adapter: PrismaAdapter(prisma) as Adapter,
+	//adapter: PrismaAdapter(prisma) as Adapter,
 
 	session: {
 		strategy: 'database',
