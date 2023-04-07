@@ -36,7 +36,6 @@
 		{ title: 'Join us', link: '/join-us' },
 	];
 
-	// Function to toggle the dropdown menu
 	function toggleDropdown() {
 		dropdownStore.update((store) => {
 			return { ...store, isOpen: !store.isOpen };
