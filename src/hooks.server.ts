@@ -6,10 +6,10 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { PrismaClient } from '@prisma/client';
 import type { Adapter } from '@auth/core/adapters';
 
-const prisma = new PrismaClient();
+//const prisma = new PrismaClient();
 
 export const handle = SvelteKitAuth({
-	adapter: PrismaAdapter(prisma) as Adapter,
+	//adapter: PrismaAdapter(prisma) as Adapter,
 
 	session: {
 		strategy: 'database',
