@@ -1,6 +1,10 @@
 /// <reference types="@sveltejs/kit" />
 import { build, files, version } from '$service-worker';
 
+// Log that the service worker has started
+console.log('Service worker started.');
+
+// Wrap the entire service worker logic in a try-catch block
 try {
 	const worker = self as unknown as any;
 	const FILES = `cache${version}`;
@@ -70,5 +74,7 @@ try {
 		}
 	});
 } catch (exception: any) {
-	console.log(JSON.stringify(exception));
+	// Log any caught exceptions and their stack trace
+	console.error('Service worker error:', exception);
+	console.error('Service worker error stack trace:', exception.stack);
 }
