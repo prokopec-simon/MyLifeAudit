@@ -31,9 +31,9 @@
 
 	const navigationOptions = [
 		{ title: 'About', link: '/about' },
-		{ title: 'Contact', link: '/contact' },
-		{ title: 'Resources', link: '/resources' },
 		{ title: 'Join us', link: '/join-us' },
+		{ title: 'Resources', link: '/resources' },
+		{ title: 'Contact', link: '/contact' },
 	];
 
 	function toggleDropdown() {
@@ -48,7 +48,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 />
 
-<nav class="flex h-20 bg-gray-800">
+<nav class="fixed top-0 z-50 flex h-20 w-full bg-gray-800">
 	<div class="ml-4 flex flex-1 items-center">
 		<button
 			class="mr-4 text-2xl font-bold focus:outline-none md:hidden"
