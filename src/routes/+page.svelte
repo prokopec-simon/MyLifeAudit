@@ -11,6 +11,19 @@
 	data.subscribe(
 		(data) => ((loading = data.isLoading), (greeting = data.data ?? ''))
 	);
+
+	import { theme } from '../stores/theme';
+
+	$: primaryColorClass =
+		$theme === 'default'
+			? 'bg-primary'
+			: $theme === 'blue'
+			? 'bg-primary'
+			: $theme === 'gray'
+			? 'bg-secondary'
+			: $theme === 'yellow'
+			? 'bg-accent'
+			: 'bg-primary'; // Set the primary color class based on the selected theme
 </script>
 
 <svelte:head>
@@ -89,3 +102,6 @@
 		</div>
 	</div>
 </section>
+<div class={primaryColorClass}>
+	<button class="text-white">Primary</button>
+</div>

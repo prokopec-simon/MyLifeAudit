@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import Dropdown from '../components/DropdownMenu.svelte';
 	import { writable } from 'svelte/store';
+	import { theme } from '../../stores/theme';
+
+	const changeTheme = (newTheme: string) => {
+		theme.set(newTheme);
+	};
 
 	let session = $page.data.session;
 
@@ -81,6 +86,12 @@
 	</div>
 	<div class="flex flex-1 items-center justify-center" />
 	<div class="mr-4 flex flex-1 items-center justify-end">
+		<button
+			class="rounded bg-accent px-4 py-2 text-white"
+			on:click={() => changeTheme('yellow')}
+		>
+			Yellow
+		</button>
 		{#if session}
 			<span class="flex items-center text-white">
 				<p class="max-w-xs truncate">{session.user?.name}</p>
