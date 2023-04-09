@@ -4,6 +4,34 @@
 	import Dropdown from '../components/DropdownMenu.svelte';
 	import { writable } from 'svelte/store';
 	import { theme } from '../../stores/theme';
+	import { setLocale, locale, LL } from '../../i18n/i18n-svelte';
+	import englishIcon from '../../../static/icons/en_round.svg';
+	import czechIcon from '../../../static/icons/cz_round.svg';
+
+	let selectedLanguage = ''; // Store the selected language
+
+	const languageStore = writable({
+		languageOptions: [
+			{
+				id: 1,
+				value: 'English',
+				icon: '/icons/en_round.svg', // Assign the SVG icon as a string to the 'icon' property
+				onClick: () => {
+					setLocale('en');
+				},
+			},
+			{
+				id: 2,
+				value: 'Česky',
+				icon: '/icons/cz_round.svg', // Assign the SVG icon as a string to the 'icon' property
+				onClick: () => {
+					setLocale('de');
+				},
+			},
+		],
+		selectedOption: '',
+		isOpen: false,
+	});
 
 	const changeTheme = (newTheme: string) => {
 		theme.set(newTheme);
@@ -40,6 +68,12 @@
 		{ title: 'Resources', link: '/resources' },
 		{ title: 'Contact', link: '/contact' },
 	];
+
+	function toggleLanguageSelection() {
+		languageStore.update((store) => {
+			return { ...store, isOpen: !store.isOpen };
+		});
+	}
 
 	function toggleDropdown() {
 		dropdownStore.update((store) => {
@@ -88,10 +122,16 @@
 	<div class="mr-4 flex flex-1 items-center justify-end">
 		<button
 			class="rounded bg-accent px-4 py-2 text-white"
-			on:click={() => changeTheme('yellow')}
+			on:click={toggleLanguageSelection}
 		>
-			Yellow
+			{$locale}
 		</button>
+		<Dropdown
+			bind:options={$languageStore.languageOptions}
+			bind:selectedOption={$languageStore.selectedOption}
+			bind:isOpen={$languageStore.isOpen}
+		/>
+		<!-- {$locale} -->
 		{#if session}
 			<span class="flex items-center text-white">
 				<p class="max-w-xs truncate">{session.user?.name}</p>

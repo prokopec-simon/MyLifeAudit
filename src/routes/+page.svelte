@@ -3,10 +3,12 @@
 	import { page } from '$app/stores';
 	import { trpc } from '$lib/trpc';
 	import Navbar from '../lib/components/Navbar.svelte';
+	import CzR from '../lib/components/Icons/Cz_rounded.svelte';
+
+	import { setLocale, locale, LL } from '../i18n/i18n-svelte';
 
 	let greeting = 'press the button to load data';
 	let loading = true;
-
 	const data = trpc.greeting.query({ name: 'TrpcTest' });
 	data.subscribe(
 		(data) => ((loading = data.isLoading), (greeting = data.data ?? ''))
@@ -34,16 +36,12 @@
 	class="flex min-h-screen items-center justify-center bg-blue-500 text-white"
 >
 	<div class="text-center">
-		<h1 class="mb-4 text-4xl font-bold">Life Audit</h1>
-		<p class="text-xl">Assess Your Life and Make It Better</p>
-		<p class="mt-4">
-			Get a comprehensive evaluation of your life and actionable recommendations
-			for improvement.
-		</p>
+		<h1 class="mb-4 text-4xl font-bold">My Life Audit</h1>
+		<p class="text-xl">Take back control of your life</p>
 		<a
 			href="/signup"
 			class="mt-8 inline-block rounded bg-white px-6 py-3 font-bold text-blue-500 transition duration-200 hover:bg-gray-200"
-			>Audit now!</a
+			>Start now!</a
 		>
 	</div>
 </main>

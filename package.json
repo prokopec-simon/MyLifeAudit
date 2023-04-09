@@ -8,7 +8,8 @@
 		"lint": "eslint --max-warnings 0 --fix . && svelte-check",
 		"postinstall": "node ./prisma/generate.cjs",
 		"dev": "vite dev",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"typesafe-i18n": "typesafe-i18n"
 	},
 	"dependencies": {
 		"@auth/core": "^0.5.1",
@@ -28,6 +29,7 @@
 		"kysely-planetscale": "^1.2.1",
 		"svelte": "^3.55.1",
 		"trpc-svelte-query": "^0.0.2",
+		"typesafe-i18n": "^5.24.3",
 		"zod": "^3.20.2"
 	},
 	"devDependencies": {

@@ -1,6 +1,13 @@
 <!-- Dropdown.svelte -->
 <script lang="ts">
-	export let options: { id: number; value: string; onClick: () => void }[] = [];
+	import Cz_rounded from '../components/Icons/Cz_rounded.svelte';
+
+	export let options: {
+		id: number;
+		value: string;
+		icon?: string;
+		onClick: () => void;
+	}[] = [];
 	export let selectedOption = '';
 	export let isOpen = false;
 
@@ -11,6 +18,7 @@
 	function selectOption(option: {
 		id: number;
 		value: string;
+		icon?: string;
 		onClick: () => void;
 	}) {
 		option.onClick(); // Call the onClick function for the selected option
@@ -26,10 +34,11 @@
 		style="right: 0; left: auto;"
 	>
 		{#each options as option (option.id)}
-			<li
-				class="cursor-pointer px-4 py-2 hover:bg-gray-100"
-				on:click={() => selectOption(option)}
-			>
+			<li class="flex cursor-pointer items-center px-4 py-2 hover:bg-gray-100">
+				<!-- Add 'flex' and 'items-center' classes -->
+				{#if option.icon}
+					<div class="w-4"><Cz_rounded /></div>
+				{/if}
 				{option.value}
 			</li>
 		{/each}
