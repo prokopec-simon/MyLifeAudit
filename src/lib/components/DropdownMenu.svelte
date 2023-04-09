@@ -35,7 +35,6 @@
 	>
 		{#each options as option (option.id)}
 			<li class="flex cursor-pointer items-center px-4 py-2 hover:bg-gray-100">
-				<!-- Add 'flex' and 'items-center' classes -->
 				{#if option.icon}
 					<div class="w-4"><Cz_rounded /></div>
 				{/if}
