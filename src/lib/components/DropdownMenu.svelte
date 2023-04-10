@@ -8,23 +8,7 @@
 		icon?: string;
 		onClick: () => void;
 	}[] = [];
-	export let selectedOption = '';
 	export let isOpen = false;
-
-	function toggleDropdown() {
-		isOpen = !isOpen;
-	}
-
-	function selectOption(option: {
-		id: number;
-		value: string;
-		icon?: string;
-		onClick: () => void;
-	}) {
-		option.onClick(); // Call the onClick function for the selected option
-		selectedOption = option.value;
-		toggleDropdown();
-	}
 </script>
 
 <div class="relative inline-block">
@@ -34,7 +18,11 @@
 		style="right: 0; left: auto;"
 	>
 		{#each options as option (option.id)}
-			<li class="flex cursor-pointer items-center px-4 py-2 hover:bg-gray-100">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<li
+				class="flex cursor-pointer items-center px-4 py-2 hover:bg-gray-100"
+				on:click={() => option.onClick()}
+			>
 				{#if option.icon}
 					<div class="w-4"><Cz_rounded /></div>
 				{/if}

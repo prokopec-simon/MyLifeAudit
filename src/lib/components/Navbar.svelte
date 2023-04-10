@@ -1,17 +1,18 @@
 <script lang="ts">
 	import NavbarLanguage from './NavbarLanguage.svelte';
 	import NavbarProfile from './NavbarProfile.svelte';
+	import LL from '../../i18n/i18n-svelte';
 
-	let isMenuOpen = false;
-	function toggleMenu() {
-		isMenuOpen = !isMenuOpen;
+	let isSidePanelMenuOpen = false;
+	function toggleSidePanelMenu() {
+		isSidePanelMenuOpen = !isSidePanelMenuOpen;
 	}
 
 	const navigationOptions = [
-		{ title: 'About', link: '/about' },
-		{ title: 'Join us', link: '/join-us' },
-		{ title: 'Resources', link: '/resources' },
-		{ title: 'Contact', link: '/contact' },
+		{ title: $LL.NAV_ABOUT(), link: '/about' },
+		{ title: $LL.MY_LIFE_AUDIT(), link: '/join-us' },
+		{ title: $LL.NAV_RESOURCES(), link: '/resources' },
+		{ title: $LL.NAV_CONTACT(), link: '/contact' },
 	];
 </script>
 
@@ -19,25 +20,25 @@
 	<div class="ml-4 flex flex-1 items-center">
 		<button
 			class="mr-4 text-2xl font-bold focus:outline-none md:hidden"
-			on:click={toggleMenu}
+			on:click={toggleSidePanelMenu}
 		>
 			<span
 				class="mb-1 block h-1 w-6 transform bg-white transition duration-500 ease-in-out"
-				class:rotate-45={isMenuOpen}
-				class:-translate-y-1.5={isMenuOpen}
-				class:rotate-0={!isMenuOpen}
-				class:translate-y-0={!isMenuOpen}
+				class:rotate-45={isSidePanelMenuOpen}
+				class:-translate-y-1.5={isSidePanelMenuOpen}
+				class:rotate-0={!isSidePanelMenuOpen}
+				class:translate-y-0={!isSidePanelMenuOpen}
 			/>
 			<span
 				class="mb-1 block h-1 w-6 bg-white opacity-0 transition duration-500 ease-in-out"
-				class:opacity-100={isMenuOpen}
+				class:opacity-100={isSidePanelMenuOpen}
 			/>
 			<span
 				class="mb-0 block h-1 w-6 transform bg-white transition duration-500 ease-in-out"
-				class:-rotate-45={isMenuOpen}
-				class:translate-y-1.5={isMenuOpen}
-				class:rotate-0={!isMenuOpen}
-				class:-translate-y-0={!isMenuOpen}
+				class:-rotate-45={isSidePanelMenuOpen}
+				class:translate-y-1.5={isSidePanelMenuOpen}
+				class:rotate-0={!isSidePanelMenuOpen}
+				class:-translate-y-0={!isSidePanelMenuOpen}
 			/>
 		</button>
 		<div class="hidden md:flex md:items-center">
@@ -52,11 +53,11 @@
 		<NavbarProfile />
 	</div>
 </nav>
-{#if isMenuOpen}
+{#if isSidePanelMenuOpen}
 	<div
 		class="menu-transition fixed left-0 top-16 h-full w-32 transform bg-gray-800 p-4 text-white transition duration-500 ease-in-out"
-		class:translate-x-0={isMenuOpen}
-		class:translate-x-full={!isMenuOpen}
+		class:translate-x-0={isSidePanelMenuOpen}
+		class:translate-x-full={!isSidePanelMenuOpen}
 	>
 		<ul class="space-y-2">
 			{#each navigationOptions as option (option.title)}

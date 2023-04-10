@@ -47,7 +47,6 @@
 	</span>
 	<Dropdown
 		bind:options={$dropdownStore.options}
-		bind:selectedOption={$dropdownStore.selectedOption}
 		bind:isOpen={$dropdownStore.isOpen}
 	/>
 {:else}

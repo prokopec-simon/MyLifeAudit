@@ -2,6 +2,26 @@
 	import Dropdown from '../components/DropdownMenu.svelte';
 	import { writable } from 'svelte/store';
 	import { setLocale, locale } from '../../i18n/i18n-svelte';
+	import { loadLocaleAsync } from '$i18n/i18n-util.async';
+	import { invalidateAll } from '$app/navigation';
+
+	const switchLocale = async (
+		newLocale: Locales,
+		updateHistoryState = true
+	) => {
+		if (!newLocale || $locale === newLocale) return;
+    
+		// load new dictionary from server
+		await loadLocaleAsync(newLocale);
+
+		// select locale
+		setLocale(newLocale);
+
+		// update `lang` attribute
+
+		// run the `load` function again
+		invalidateAll();
+	};
 
 	const languageStore = writable({
 		languageOptions: [
@@ -10,7 +30,7 @@
 				value: 'English',
 				icon: '/icons/en_round.svg',
 				onClick: () => {
-					setLocale('en');
+					switchLocale('en');
 				},
 			},
 			{
@@ -18,11 +38,10 @@
 				value: 'Česky',
 				icon: '/icons/cz_round.svg',
 				onClick: () => {
-					setLocale('de');
+					switchLocale('cs');
 				},
 			},
 		],
-		selectedOption: '',
 		isOpen: false,
 	});
 
@@ -41,6 +60,5 @@
 </button>
 <Dropdown
 	bind:options={$languageStore.languageOptions}
-	bind:selectedOption={$languageStore.selectedOption}
 	bind:isOpen={$languageStore.isOpen}
 />

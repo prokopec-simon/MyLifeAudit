@@ -6,7 +6,7 @@ export type BaseTranslation = BaseTranslationType
 export type BaseLocale = 'en'
 
 export type Locales =
-	| 'de'
+	| 'cs'
 	| 'en'
 
 export type Translation = RootTranslation
@@ -15,14 +15,25 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * H​i​ ​{​n​a​m​e​}​!​ ​P​l​e​a​s​e​ ​l​e​a​v​e​ ​a​ ​s​t​a​r​ ​i​f​ ​y​o​u​ ​l​i​k​e​ ​t​h​i​s​ ​p​r​o​j​e​c​t​:​ ​h​t​t​p​s​:​/​/​g​i​t​h​u​b​.​c​o​m​/​i​v​a​n​h​o​f​e​r​/​t​y​p​e​s​a​f​e​-​i​1​8​n
-	 * @param {string} name
+	 * M​y​ ​L​i​f​e​ ​A​u​d​i​t
 	 */
-	HI: RequiredParams<'name'>
+	MY_LIFE_AUDIT: string
 	/**
-	 * H​m​m
+	 * A​b​o​u​t
 	 */
-	Test: string
+	NAV_ABOUT: string
+	/**
+	 * C​o​n​t​a​c​t
+	 */
+	NAV_CONTACT: string
+	/**
+	 * R​e​s​o​u​r​c​e​s
+	 */
+	NAV_RESOURCES: string
+	/**
+	 * J​o​i​n​ ​u​s
+	 */
+	NAV_JOIN_US: string
 	/**
 	 * T​h​i​s​ ​l​o​g​ ​w​a​s​ ​c​a​l​l​e​d​ ​f​r​o​m​ ​'​{​f​i​l​e​N​a​m​e​}​'
 	 * @param {string} fileName
@@ -32,13 +43,25 @@ type RootTranslation = {
 
 export type TranslationFunctions = {
 	/**
-	 * Hi {name}! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n
+	 * My Life Audit
 	 */
-	HI: (arg: { name: string }) => LocalizedString
+	MY_LIFE_AUDIT: () => LocalizedString
 	/**
-	 * Hmm
+	 * About
 	 */
-	Test: () => LocalizedString
+	NAV_ABOUT: () => LocalizedString
+	/**
+	 * Contact
+	 */
+	NAV_CONTACT: () => LocalizedString
+	/**
+	 * Resources
+	 */
+	NAV_RESOURCES: () => LocalizedString
+	/**
+	 * Join us
+	 */
+	NAV_JOIN_US: () => LocalizedString
 	/**
 	 * This log was called from '{fileName}'
 	 */

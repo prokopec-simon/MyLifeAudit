@@ -1,11 +1,7 @@
 <script>
-	import { signIn, signOut } from '@auth/sveltekit/client';
-	import { page } from '$app/stores';
 	import { trpc } from '$lib/trpc';
 	import Navbar from '../lib/components/Navbar.svelte';
-	import CzR from '../lib/components/Icons/Cz_rounded.svelte';
-
-	import { setLocale, locale, LL } from '../i18n/i18n-svelte';
+	import { setLocale, locale } from '../i18n/i18n-svelte';
 
 	let greeting = 'press the button to load data';
 	let loading = true;
@@ -43,6 +39,11 @@
 			class="mt-8 inline-block rounded bg-white px-6 py-3 font-bold text-blue-500 transition duration-200 hover:bg-gray-200"
 			>Start now!</a
 		>
+		<button
+			on:click={() => {
+				setLocale('cs');
+			}}
+		/>
 	</div>
 </main>
 <section class="flex h-screen bg-white">
