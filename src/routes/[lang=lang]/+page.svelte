@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
 	import { trpc } from '$lib/trpc';
-	import Navbar from '../lib/components/Navbar.svelte';
-	import { setLocale, locale } from '../i18n/i18n-svelte';
+	import Navbar from '../../lib/components/Navbar.svelte';
+
+	import { setLocale, locale, LL } from '$i18n/i18n-svelte';
 
 	let greeting = 'press the button to load data';
 	let loading = true;
@@ -9,25 +10,12 @@
 	data.subscribe(
 		(data) => ((loading = data.isLoading), (greeting = data.data ?? ''))
 	);
-
-	import { theme } from '../stores/theme';
-
-	$: primaryColorClass =
-		$theme === 'default'
-			? 'bg-primary'
-			: $theme === 'blue'
-			? 'bg-primary'
-			: $theme === 'gray'
-			? 'bg-secondary'
-			: $theme === 'yellow'
-			? 'bg-accent'
-			: 'bg-primary'; // Set the primary color class based on the selected theme
 </script>
 
 <svelte:head>
 	<title>Life Audit - Assess Your Life</title>
 </svelte:head>
-<Navbar />
+
 <main
 	class="flex min-h-screen items-center justify-center bg-blue-500 text-white"
 >
@@ -46,6 +34,10 @@
 		/>
 	</div>
 </main>
+<section>{$LL.welcome({ year: 2020 })}</section>
+{loading}
+<p>{greeting}</p>
+
 <section class="flex h-screen bg-white">
 	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
 		<div class="w-1/2 p-8">
@@ -101,6 +93,3 @@
 		</div>
 	</div>
 </section>
-<div class={primaryColorClass}>
-	<button class="text-white">Primary</button>
-</div>

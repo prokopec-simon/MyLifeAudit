@@ -1,7 +1,5 @@
 <!-- Dropdown.svelte -->
 <script lang="ts">
-	import Cz_rounded from '../components/Icons/Cz_rounded.svelte';
-
 	export let options: {
 		id: number;
 		value: string;
@@ -24,7 +22,7 @@
 				on:click={() => option.onClick()}
 			>
 				{#if option.icon}
-					<div class="w-4"><Cz_rounded /></div>
+					<div class="w-4" />
 				{/if}
 				{option.value}
 			</li>

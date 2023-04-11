@@ -10,7 +10,7 @@
 		updateHistoryState = true
 	) => {
 		if (!newLocale || $locale === newLocale) return;
-    
+
 		// load new dictionary from server
 		await loadLocaleAsync(newLocale);
 

@@ -9,12 +9,6 @@ declare namespace App {
 		locale: Locales;
 		LL: TranslationFunctions;
 	}
-	interface Platform {
-		env: {
-			// KV: KVNamespace;
-		};
-		context: ExecutionContext;
-	}
 
 	// interface Locals {}
 	// interface Error {}

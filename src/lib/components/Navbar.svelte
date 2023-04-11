@@ -2,17 +2,19 @@
 	import NavbarLanguage from './NavbarLanguage.svelte';
 	import NavbarProfile from './NavbarProfile.svelte';
 	import LL from '../../i18n/i18n-svelte';
+	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
 
 	let isSidePanelMenuOpen = false;
 	function toggleSidePanelMenu() {
 		isSidePanelMenuOpen = !isSidePanelMenuOpen;
 	}
 
-	const navigationOptions = [
-		{ title: $LL.NAV_ABOUT(), link: '/about' },
-		{ title: $LL.MY_LIFE_AUDIT(), link: '/join-us' },
-		{ title: $LL.NAV_RESOURCES(), link: '/resources' },
-		{ title: $LL.NAV_CONTACT(), link: '/contact' },
+	let about = $LL.NAV_ABOUT();
+	let navigationOptions = [
+		{ title: 'NAV_ABOUT', link: '/about' },
+		{ title: 'NAV_JOIN_US', link: '/join-us' },
+		{ title: 'NAV_RESOURCES', link: '/resources' },
+		{ title: 'NAV_CONTACT', link: '/contact' },
 	];
 </script>
 
@@ -43,12 +45,13 @@
 		</button>
 		<div class="hidden md:flex md:items-center">
 			{#each navigationOptions as option (option.title)}
-				<a href={option.link} class="ml-4 text-white">{option.title}</a>
+				<a href={option.link} class="ml-4 text-white">{$LL[option.title]()}</a>
 			{/each}
 		</div>
 	</div>
 	<div class="flex flex-1 items-center justify-center" />
 	<div class="mr-4 flex flex-1 items-center justify-end">
+		<LocaleSwitcher />
 		<NavbarLanguage />
 		<NavbarProfile />
 	</div>
@@ -62,7 +65,9 @@
 		<ul class="space-y-2">
 			{#each navigationOptions as option (option.title)}
 				<li>
-					<a class="hover:text-gray-400" href={option.link}>{option.title}</a>
+					<a class="hover:text-gray-400" href={option.link}
+						>{$LL[option.title]()}</a
+					>
 				</li>
 			{/each}
 		</ul>

@@ -7,9 +7,7 @@ export type BaseLocale = 'en'
 
 export type Locales =
 	| 'cs'
-	| 'de'
 	| 'en'
-	| 'it'
 
 export type Translation = RootTranslation
 
@@ -31,6 +29,22 @@ type RootTranslation = {
 	 * @param {string | number | boolean} 0
 	 */
 	spectators: RequiredParams<'0'>
+	/**
+	 * A​b​o​u​t
+	 */
+	NAV_ABOUT: string
+	/**
+	 * C​o​n​t​a​c​t
+	 */
+	NAV_CONTACT: string
+	/**
+	 * S​o​u​r​c​e​s
+	 */
+	NAV_RESOURCES: string
+	/**
+	 * J​o​i​n​ ​u​s
+	 */
+	NAV_JOIN_US: string
 	summit: {
 		/**
 		 * {​0​|​s​i​m​p​l​e​D​a​t​e​}
@@ -58,6 +72,22 @@ export type TranslationFunctions = {
 	 * {0} live spectator{{s}}
 	 */
 	spectators: (arg0: string | number | boolean) => LocalizedString
+	/**
+	 * About
+	 */
+	NAV_ABOUT: () => LocalizedString
+	/**
+	 * Contact
+	 */
+	NAV_CONTACT: () => LocalizedString
+	/**
+	 * Sources
+	 */
+	NAV_RESOURCES: () => LocalizedString
+	/**
+	 * Join us
+	 */
+	NAV_JOIN_US: () => LocalizedString
 	summit: {
 		/**
 		 * {0|simpleDate}
