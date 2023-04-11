@@ -1,7 +1,8 @@
 /// <reference types="@sveltejs/kit" />
 
-type Locales = import('$i18n/i18n-types').Locales;
-type TranslationFunctions = import('$i18n/i18n-types').TranslationFunctions;
+type Locales = import('../src/i18n/i18n-types').Locales;
+type TranslationFunctions =
+	import('../src/i18n/i18n-types').TranslationFunctions;
 
 declare namespace App {
 	interface Locals {

@@ -7,7 +7,8 @@
 		"db:push": "prisma db push && node ./prisma/generate.cjs",
 		"lint": "eslint --max-warnings 0 --fix . && svelte-check",
 		"postinstall": "node ./prisma/generate.cjs",
-		"dev": "vite dev",
+		"dev": "npm-run-all --parallel sveltekit typesafe-i18n",
+		"sveltekit": "vite dev",
 		"preview": "vite preview",
 		"typesafe-i18n": "typesafe-i18n"
 	},
@@ -27,6 +28,7 @@
 		"kysely": "^0.23.4",
 		"kysely-codegen": "^0.9.0",
 		"kysely-planetscale": "^1.2.1",
+		"npm-run-all": "^4.1.5",
 		"svelte": "^3.55.1",
 		"trpc-svelte-query": "^0.0.2",
 		"typesafe-i18n": "^5.24.3",

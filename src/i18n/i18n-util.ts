@@ -12,7 +12,9 @@ export const baseLocale: Locales = 'en'
 
 export const locales: Locales[] = [
 	'cs',
-	'en'
+	'de',
+	'en',
+	'it'
 ]
 
 export const isLocale = (locale: string): locale is Locales => locales.includes(locale as Locales)
