@@ -1,7 +1,3 @@
-import { detectLocale, i18n, isLocale } from '$i18n/i18n-util';
-import { loadAllLocales } from '$i18n/i18n-util.sync';
-import type { Handle, RequestEvent } from '@sveltejs/kit';
-import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';
 import { SvelteKitAuth } from '@auth/sveltekit';
 import GitHub from '@auth/core/providers/github';
 import { GITHUB_ID, GITHUB_SECRET } from '$env/static/private';
@@ -9,12 +5,17 @@ import type { Provider } from '@auth/core/providers';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import type { Adapter } from '@auth/core/adapters';
 import { prisma } from './lib/server/prisma';
+import { initAcceptLanguageHeaderDetector } from 'typesafe-i18n/detectors';
+import { loadAllLocales } from '$i18n/i18n-util.sync';
+import { detectLocale, i18n, isLocale } from '$i18n/i18n-util';
+import type { Handle, RequestEvent } from '@sveltejs/kit';
 
 loadAllLocales();
 const L = i18n();
 
 export const handle: Handle = async ({ event, resolve }) => {
-	SvelteKitAuth({
+	// Authentication logic
+	const authHandle = SvelteKitAuth({
 		adapter: PrismaAdapter(prisma) as Adapter,
 		session: {
 			strategy: 'database',
@@ -26,8 +27,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 			GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
 		] as Provider[],
 	});
-
-	console.log('Handler:', event.locals);
 
 	// read language slug
 	const [, lang] = event.url.pathname.split('/');
@@ -51,9 +50,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.LL = LL;
 
 	// replace html lang attribute with correct language
-	return resolve(event, {
+	await resolve(event, {
 		transformPageChunk: ({ html }) => html.replace('%lang%', locale),
 	});
+
+	return authHandle({ event, resolve });
 };
 
 const getPreferredLocale = ({ request }: RequestEvent) => {
@@ -63,3 +64,16 @@ const getPreferredLocale = ({ request }: RequestEvent) => {
 
 	return detectLocale(acceptLanguageDetector);
 };
+
+export const authHandle = SvelteKitAuth({
+	adapter: PrismaAdapter(prisma) as Adapter,
+	session: {
+		strategy: 'database',
+		generateSessionToken: () => {
+			return crypto.randomUUID();
+		},
+	},
+	providers: [
+		GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
+	] as Provider[],
+});
