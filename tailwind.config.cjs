@@ -1,14 +1,26 @@
 /** @type {import('tailwindcss').Config} */
+const { createThemes } = require('tw-colors');
+
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	theme: {
-		extend: {
-			backgroundColor: {
-				primary: '#007bff', // blue
-				secondary: '#6c757d', // gray
-				accent: '#ffc107', // yellow
+	plugins: [
+		createThemes({
+			light: {
+				primary: 'steelblue',
+				secondary: 'darkblue',
+				brand: '#F3F3F3',
 			},
-		},
-	},
-	plugins: [],
+			custom_pink: {
+				primary: 'turquoise',
+				secondary: 'tomato',
+				brand: '#4A4A4A',
+				t:'red'
+			},
+			forest: {
+				primary: '#2A9D8F',
+				secondary: '#E9C46A',
+				brand: '#264653',
+			},
+		}),
+	],
 };

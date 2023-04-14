@@ -9,6 +9,11 @@
 		isSidePanelMenuOpen = !isSidePanelMenuOpen;
 	}
 
+	function changeColorTheme() {
+		document.documentElement.classList.remove('theme-forest');
+		document.documentElement.classList.add('theme-light');
+	}
+
 	let about = $LL.NAV_ABOUT();
 	let navigationOptions = [
 		{ title: 'NAV_ABOUT', link: '/about' },
@@ -51,6 +56,7 @@
 	</div>
 	<div class="flex flex-1 items-center justify-center" />
 	<div class="mr-4 flex flex-1 items-center justify-end">
+		<button on:click={changeColorTheme}>test</button>
 		<LocaleSwitcher />
 		<NavbarLanguage />
 		<NavbarProfile />

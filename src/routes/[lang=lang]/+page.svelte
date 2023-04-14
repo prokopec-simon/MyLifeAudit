@@ -17,7 +17,7 @@
 </svelte:head>
 
 <main
-	class="flex min-h-screen items-center justify-center bg-blue-500 text-white"
+	class="flex min-h-screen items-center justify-center bg-primary text-white"
 >
 	<div class="text-center">
 		<h1 class="mb-4 text-4xl font-bold">My Life Audit</h1>
@@ -27,11 +27,6 @@
 			class="mt-8 inline-block rounded bg-white px-6 py-3 font-bold text-blue-500 transition duration-200 hover:bg-gray-200"
 			>Start now!</a
 		>
-		<button
-			on:click={() => {
-				setLocale('cs');
-			}}
-		/>
 	</div>
 </main>
 <section>{$LL.welcome({ year: 2020 })}</section>
