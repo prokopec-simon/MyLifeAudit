@@ -57,7 +57,6 @@
 	<div class="flex flex-1 items-center justify-center" />
 	<div class="mr-4 flex flex-1 items-center justify-end">
 		<button on:click={changeColorTheme}>test</button>
-		<LocaleSwitcher />
 		<NavbarLanguage />
 		<NavbarProfile />
 	</div>

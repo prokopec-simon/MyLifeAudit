@@ -4,6 +4,11 @@
 	import { setLocale, locale } from '../../i18n/i18n-svelte';
 	import { loadLocaleAsync } from '$i18n/i18n-util.async';
 	import { invalidateAll } from '$app/navigation';
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
+	import type { Locales } from '$i18n/i18n-types';
+	import { locales } from '$i18n/i18n-util';
+	import { replaceLocaleInUrl } from '../../utils';
 
 	const switchLocale = async (
 		newLocale: Locales,
@@ -11,17 +16,33 @@
 	) => {
 		if (!newLocale || $locale === newLocale) return;
 
-		// load new dictionary from server
 		await loadLocaleAsync(newLocale);
-
-		// select locale
 		setLocale(newLocale);
+		document.querySelector('html').setAttribute('lang', newLocale);
 
-		// update `lang` attribute
+		if (updateHistoryState) {
+			history.pushState(
+				{ locale: newLocale },
+				'',
+				replaceLocaleInUrl($page.url, newLocale)
+			);
+		}
 
-		// run the `load` function again
 		invalidateAll();
 	};
+
+	const handlePopStateEvent = async ({ state }: PopStateEvent) =>
+		switchLocale(state.locale, false);
+	// update locale when page store changes
+	$: if (browser) {
+		const lang = $page.params.lang as Locales;
+		switchLocale(lang, false);
+		history.replaceState(
+			{ ...history.state, locale: lang },
+			'',
+			replaceLocaleInUrl($page.url, lang)
+		);
+	}
 
 	const languageStore = writable({
 		languageOptions: [
@@ -52,8 +73,10 @@
 	}
 </script>
 
+<svelte:window on:popstate={handlePopStateEvent} />
+
 <button
-	class="rounded bg-accent px-4 py-2 text-white"
+	class="bg-accent rounded px-4 py-2 text-white"
 	on:click={toggleLanguageDropdown}
 >
 	{$locale}
