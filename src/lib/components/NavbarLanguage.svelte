@@ -9,6 +9,21 @@
 	import type { Locales } from '$i18n/i18n-types';
 	import { locales } from '$i18n/i18n-util';
 	import { replaceLocaleInUrl } from '../../utils';
+	import CircleFlagsCz from '~icons/circle-flags/cz';
+	import CircleFlagsUs from '~icons/circle-flags/us';
+
+	const icons = {
+		cz: CircleFlagsCz,
+		us: CircleFlagsUs,
+		// Add more icons here
+	};
+	function getIconComponent(iconName: string) {
+		return icons[iconName] || null;
+	}
+	const localeToFlag = [
+		{ locale: 'cs', flag: 'cz' },
+		{ locale: 'en', flag: 'us' },
+	];
 
 	const switchLocale = async (
 		newLocale: Locales,
@@ -49,7 +64,7 @@
 			{
 				id: 1,
 				value: 'English',
-				icon: '/icons/en_round.svg',
+				icon: 'us',
 				onClick: () => {
 					switchLocale('en');
 				},
@@ -57,7 +72,7 @@
 			{
 				id: 2,
 				value: 'Česky',
-				icon: '/icons/cz_round.svg',
+				icon: 'cz',
 				onClick: () => {
 					switchLocale('cs');
 				},
@@ -73,13 +88,16 @@
 	}
 </script>
 
-<svelte:window on:popstate={handlePopStateEvent} />
-
 <button
 	class="bg-accent rounded px-4 py-2 text-white"
 	on:click={toggleLanguageDropdown}
 >
-	{$locale}
+	<svelte:component
+		this={getIconComponent(
+			localeToFlag.find((map) => map.locale == $locale).flag
+		)}
+		class="mr-3"
+	/>
 </button>
 <Dropdown
 	bind:options={$languageStore.languageOptions}

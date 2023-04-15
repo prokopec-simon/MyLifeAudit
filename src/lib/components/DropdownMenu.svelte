@@ -1,5 +1,15 @@
 <!-- Dropdown.svelte -->
 <script lang="ts">
+	// Import icons dynamically
+	import CircleFlagsCz from '~icons/circle-flags/cz';
+	import CircleFlagsUs from '~icons/circle-flags/us';
+
+	const icons = {
+		cz: CircleFlagsCz,
+		us: CircleFlagsUs,
+		// Add more icons here
+	};
+
 	export let options: {
 		id: number;
 		value: string;
@@ -7,6 +17,11 @@
 		onClick: () => void;
 	}[] = [];
 	export let isOpen = false;
+
+	// Function to get the icon component based on icon name
+	function getIconComponent(iconName: string) {
+		return icons[iconName] || null;
+	}
 </script>
 
 <div class="relative inline-block">
@@ -22,7 +37,12 @@
 				on:click={() => option.onClick()}
 			>
 				{#if option.icon}
-					<div class="w-4" />
+					{#if getIconComponent(option.icon)}
+						<svelte:component
+							this={getIconComponent(option.icon)}
+							class="mr-3"
+						/>
+					{/if}
 				{/if}
 				{option.value}
 			</li>
