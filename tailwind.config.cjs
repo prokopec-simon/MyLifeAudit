@@ -10,13 +10,7 @@ module.exports = {
 				secondary: 'darkblue',
 				brand: '#F3F3F3',
 			},
-			custom_pink: {
-				primary: 'turquoise',
-				secondary: 'tomato',
-				brand: '#4A4A4A',
-				t:'red'
-			},
-			forest: {
+			dark: {
 				primary: '#2A9D8F',
 				secondary: '#E9C46A',
 				brand: '#264653',

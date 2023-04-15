@@ -3,15 +3,11 @@
 	import NavbarProfile from './NavbarProfile.svelte';
 	import LL from '../../i18n/i18n-svelte';
 	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
+	import NavbarTheme from './NavbarTheme.svelte';
 
 	let isSidePanelMenuOpen = false;
 	function toggleSidePanelMenu() {
 		isSidePanelMenuOpen = !isSidePanelMenuOpen;
-	}
-
-	function changeColorTheme() {
-		document.documentElement.classList.remove('theme-forest');
-		document.documentElement.classList.add('theme-light');
 	}
 
 	let about = $LL.NAV_ABOUT();
@@ -56,8 +52,8 @@
 	</div>
 	<div class="flex flex-1 items-center justify-center" />
 	<div class="mr-4 flex flex-1 items-center justify-end">
-		<button on:click={changeColorTheme}>test</button>
 		<NavbarLanguage />
+		<NavbarTheme />
 		<NavbarProfile />
 	</div>
 </nav>

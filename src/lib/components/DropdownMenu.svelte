@@ -3,16 +3,19 @@
 	// Import icons dynamically
 	import CircleFlagsCz from '~icons/circle-flags/cz';
 	import CircleFlagsUs from '~icons/circle-flags/us';
+	import MdiCheckboxBlankCircle from '~icons/mdi/checkbox-blank-circle';
 
 	const icons = {
 		cz: CircleFlagsCz,
 		us: CircleFlagsUs,
+		circle: MdiCheckboxBlankCircle,
 		// Add more icons here
 	};
 
 	export let options: {
 		id: number;
-		value: string;
+		value?: string;
+		color?: string;
 		icon?: string;
 		onClick: () => void;
 	}[] = [];
@@ -41,10 +44,13 @@
 						<svelte:component
 							this={getIconComponent(option.icon)}
 							class="mr-3"
+							color={option.color}
 						/>
 					{/if}
 				{/if}
-				{option.value}
+				{#if option.value}
+					{option.value}
+				{/if}
 			</li>
 		{/each}
 	</ul>
