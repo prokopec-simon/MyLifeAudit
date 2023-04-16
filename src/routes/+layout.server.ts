@@ -9,6 +9,5 @@ export const load: LayoutServerLoad = async (event) => {
 		locale: event.locals.locale,
 		trpc: trpc.ssr(event),
 		session: await event.locals.getSession(),
-		test: '5',
 	};
 };

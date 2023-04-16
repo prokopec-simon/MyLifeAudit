@@ -21,7 +21,7 @@
 		return icons[iconName] || null;
 	}
 	const localeToFlag = [
-		{ locale: 'cs', flag: 'cz' },
+		{ locale: 'cz', flag: 'cz' },
 		{ locale: 'en', flag: 'us' },
 	];
 
@@ -74,7 +74,7 @@
 				value: 'Česky',
 				icon: 'cz',
 				onClick: () => {
-					switchLocale('cs');
+					switchLocale('cz');
 				},
 			},
 		],
