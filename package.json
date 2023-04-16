@@ -35,9 +35,7 @@
 		"zod": "^3.20.2"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20230115.0",
 		"@iconify/json": "^2.2.50",
-		"@sveltejs/adapter-cloudflare": "^2.0.1",
 		"@typescript-eslint/eslint-plugin": "^5.50.0",
 		"@typescript-eslint/parser": "^5.50.0",
 		"autoprefixer": "^10.4.13",

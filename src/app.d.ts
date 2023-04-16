@@ -1,5 +1,4 @@
 /// <reference types="@sveltejs/kit" />
-/// <reference types="@cloudflare/workers-types" />
 /// <reference types="unplugin-icons/types/svelte" />
 
 declare namespace App {
