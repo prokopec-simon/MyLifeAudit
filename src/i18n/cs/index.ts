@@ -1,6 +1,6 @@
 import type { BaseTranslation } from '../i18n-types.js';
 
-const cz = {
+const cs = {
 	PAGE_TITLE: 'Můj životní audit',
 	MY_LIFE_AUDIT: 'Můj životní audit',
 	NAV_ABOUT: 'O projektu',
@@ -11,4 +11,4 @@ const cz = {
 	welcome: 'Vítejte to Svelte Fall Summit {year:number}',
 } satisfies BaseTranslation;
 
-export default cz;
+export default cs;
