@@ -1,6 +1,7 @@
 import type { BaseTranslation } from '../i18n-types.js';
 
 const cs = {
+	PAGE_TITLE: 'Můj životní audit',
 	MY_LIFE_AUDIT: 'Můj životní audit',
 	NAV_ABOUT: 'O projektu',
 	NAV_CONTACT: 'Kontakt',

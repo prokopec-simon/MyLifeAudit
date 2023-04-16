@@ -12,34 +12,42 @@
 	);
 </script>
 
-<svelte:head>
-	<title>Life Audit - Assess Your Life</title>
-</svelte:head>
-
 <main
-	class="flex min-h-screen items-center justify-center bg-primary text-white"
+	class="flex min-h-screen items-center justify-center bg-blue-500 text-white"
 >
 	<div class="text-center">
-		<h1 class="mb-4 text-4xl font-bold">My Life Audit</h1>
-		<p class="text-xl">Take back control of your life</p>
+		<h1 class="mb-4 text-4xl font-bold">{$LL.PAGE_TITLE()}</h1>
+		<p class="text-xl">Assess Your Life and Make It Better</p>
+		<p class="mt-4">
+			Get a comprehensive evaluation of your life and actionable recommendations
+			for improvement.
+		</p>
 		<a
 			href="/signup"
 			class="mt-8 inline-block rounded bg-white px-6 py-3 font-bold text-blue-500 transition duration-200 hover:bg-gray-200"
-			>Start now!</a
+			>Audit now!</a
 		>
 	</div>
+	<div class="mt-8 sm:ml-8 sm:mt-0 md:ml-16 lg:ml-24 xl:ml-24">
+		<img
+			src="https://via.placeholder.com/400"
+			alt="Placeholder"
+			class="mx-auto sm:mx-0 sm:mt-4"
+		/>
+	</div>
 </main>
-<section>{$LL.welcome({ year: 2020 })}</section>
+<!-- <section>{$LL.welcome({ year: 2020 })}</section>
 {loading}
-<p>{greeting}</p>
+<p>{greeting}</p> -->
 
 <section class="flex h-screen bg-white">
 	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
 		<div class="w-1/2 p-8">
 			<h2 class="mb-4 text-center text-3xl font-bold">About Us</h2>
 			<p class="text-center text-xl">
-				We are a team of experts dedicated to helping individuals assess their
-				lives and make positive changes.
+				If you feel like you need to do a Life Audit, you'll realise that you
+				should have done this a long time ago. Well it's never too late to
+				retake control of your life.
 			</p>
 			<p class="mt-4 text-center">
 				Our mission is to provide you with a comprehensive evaluation of your

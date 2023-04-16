@@ -13,7 +13,7 @@ export const load: PageLoad = async ({ parent }) => {
 	const $LL = get(LL);
 	console.info($LL.log({ fileName: '+page.ts' }));
 	return {
-		title: $LL.title({ year: 2021 }),
+		title: $LL.PAGE_TITLE(),
 		session: session,
 	};
 };

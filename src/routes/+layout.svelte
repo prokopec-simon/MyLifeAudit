@@ -10,6 +10,7 @@
 
 	export let data: LayoutData;
 	const queryClient = trpc.hydrateQueryClient(data.trpc);
+	console.log('LayoutData:', $page.data);
 	setLocale(data.locale);
 </script>
 
@@ -22,6 +23,6 @@
 </main>
 
 <svelte:head>
-	<title>{$page.data.title || 'typesafe-i18n'}</title>
+	<title>{$page.data.title}</title>
 	<HeadHrefLangs />
 </svelte:head>

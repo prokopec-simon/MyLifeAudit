@@ -15,20 +15,9 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * t​y​p​e​s​a​f​e​-​i​1​8​n​ ​-​ ​S​v​e​l​t​e​ ​F​a​l​l​ ​S​u​m​m​i​t​ ​{​y​e​a​r​}
-	 * @param {number} year
+	 * M​y​ ​L​i​f​e​ ​A​u​d​i​t
 	 */
-	title: RequiredParams<'year'>
-	/**
-	 * W​e​l​c​o​m​e​ ​t​o​ ​S​v​e​l​t​e​ ​F​a​l​l​ ​S​u​m​m​i​t​ ​{​y​e​a​r​}
-	 * @param {number} year
-	 */
-	welcome: RequiredParams<'year'>
-	/**
-	 * {​0​}​ ​l​i​v​e​ ​s​p​e​c​t​a​t​o​r​{​{​s​}​}
-	 * @param {string | number | boolean} 0
-	 */
-	spectators: RequiredParams<'0'>
+	PAGE_TITLE: string
 	/**
 	 * A​b​o​u​t
 	 */
@@ -45,13 +34,6 @@ type RootTranslation = {
 	 * J​o​i​n​ ​u​s
 	 */
 	NAV_JOIN_US: string
-	summit: {
-		/**
-		 * {​0​|​s​i​m​p​l​e​D​a​t​e​}
-		 * @param {Date} 0
-		 */
-		schedule: RequiredParams<'0|simpleDate'>
-	}
 	/**
 	 * T​h​i​s​ ​l​o​g​ ​w​a​s​ ​c​a​l​l​e​d​ ​f​r​o​m​ ​'​{​f​i​l​e​N​a​m​e​}​'
 	 * @param {string} fileName
@@ -61,17 +43,9 @@ type RootTranslation = {
 
 export type TranslationFunctions = {
 	/**
-	 * typesafe-i18n - Svelte Fall Summit {year}
+	 * My Life Audit
 	 */
-	title: (arg: { year: number }) => LocalizedString
-	/**
-	 * Welcome to Svelte Fall Summit {year}
-	 */
-	welcome: (arg: { year: number }) => LocalizedString
-	/**
-	 * {0} live spectator{{s}}
-	 */
-	spectators: (arg0: string | number | boolean) => LocalizedString
+	PAGE_TITLE: () => LocalizedString
 	/**
 	 * About
 	 */
@@ -88,18 +62,10 @@ export type TranslationFunctions = {
 	 * Join us
 	 */
 	NAV_JOIN_US: () => LocalizedString
-	summit: {
-		/**
-		 * {0|simpleDate}
-		 */
-		schedule: (arg0: Date) => LocalizedString
-	}
 	/**
 	 * This log was called from '{fileName}'
 	 */
 	log: (arg: { fileName: string }) => LocalizedString
 }
 
-export type Formatters = {
-	simpleDate: (value: Date) => unknown
-}
+export type Formatters = {}
