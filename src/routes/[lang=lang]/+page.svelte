@@ -13,7 +13,7 @@
 </script>
 
 <main
-	class="flex min-h-screen items-center justify-center bg-primary text-white"
+	class="flex min-h-screen flex-col-reverse items-center justify-center bg-primary text-white md:flex-row"
 >
 	<div class="text-center">
 		<h1 class="mb-4 text-4xl font-bold">{$LL.PAGE_TITLE()}</h1>
@@ -36,10 +36,6 @@
 		/>
 	</div>
 </main>
-<!-- <section>{$LL.welcome({ year: 2020 })}</section>
-{loading}
-<p>{greeting}</p> -->
-
 <section class="flex h-screen bg-white">
 	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
 		<div class="w-1/2 p-8">
