@@ -13,7 +13,7 @@
 </script>
 
 <main
-	class="flex min-h-screen flex-col-reverse items-center justify-center bg-primary text-white md:flex-row"
+	class="flex min-h-screen flex-col-reverse items-center justify-center bg-primary text-text_primary md:flex-row"
 >
 	<div class="text-center">
 		<h1 class="mb-4 text-4xl font-bold">{$LL.PAGE_TITLE()}</h1>

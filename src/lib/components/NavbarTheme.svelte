@@ -12,6 +12,7 @@
 	import CircleFlagsCz from '~icons/circle-flags/cz';
 	import CircleFlagsUs from '~icons/circle-flags/us';
 	import MdiCheckboxBlankCircle from '~icons/mdi/checkbox-blank-circle';
+	import { colors } from '../../colorThemes';
 
 	function changeColorTheme(newTheme: string) {
 		const themePrefix = 'theme-';
@@ -32,7 +33,7 @@
 				id: 1,
 				icon: 'circle',
 				value: 'Light',
-				color: 'steelblue',
+				color: colors.light.primary,
 				onClick: () => {
 					changeColorTheme('light');
 				},
@@ -41,7 +42,7 @@
 				id: 2,
 				icon: 'circle',
 				value: 'Dark',
-				color: '#2A9D8F',
+				color: colors.dark.primary,
 				onClick: () => {
 					changeColorTheme('dark');
 				},

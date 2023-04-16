@@ -19,7 +19,7 @@
 	];
 </script>
 
-<nav class="fixed top-0 z-50 flex h-20 w-full bg-gray-800">
+<nav class="fixed top-0 z-50 flex h-20 w-full bg-primary">
 	<div class="ml-4 flex flex-1 items-center">
 		<button
 			class="mr-4 text-2xl font-bold focus:outline-none md:hidden"
@@ -46,7 +46,9 @@
 		</button>
 		<div class="hidden md:flex md:items-center">
 			{#each navigationOptions as option (option.title)}
-				<a href={option.link} class="ml-4 text-white">{$LL[option.title]()}</a>
+				<a href={option.link} class="ml-4 text-text_primary"
+					>{$LL[option.title]()}</a
+				>
 			{/each}
 		</div>
 	</div>
@@ -59,7 +61,7 @@
 </nav>
 {#if isSidePanelMenuOpen}
 	<div
-		class="menu-transition fixed left-0 top-16 h-full w-32 transform bg-gray-800 p-4 text-white transition duration-500 ease-in-out"
+		class="menu-transition fixed left-0 top-16 h-full w-32 transform bg-primary p-4 text-text_primary transition duration-500 ease-in-out"
 		class:translate-x-0={isSidePanelMenuOpen}
 		class:translate-x-full={!isSidePanelMenuOpen}
 	>

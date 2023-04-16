@@ -33,7 +33,7 @@
 </script>
 
 {#if session}
-	<span class="flex items-center text-white">
+	<span class="flex items-center text-text_primary">
 		<p class="max-w-xs truncate">{session.user?.name}</p>
 		<button
 			class="ml-2 cursor-pointer border-none bg-none"
@@ -47,5 +47,8 @@
 		bind:isOpen={$dropdownStore.isOpen}
 	/>
 {:else}
-	<button on:click={() => signIn()} class="button">Sign In</button>
+	<button
+		on:click={() => signIn()}
+		class="button rounded-md bg-brand px-4 py-2 text-primary">Sign In</button
+	>
 {/if}
