@@ -15,3 +15,9 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+declare namespace svelte.JSX {
+	interface HTMLAttributes<T> {
+		onclick_outside?: (e: CustomEvent) => void;
+	}
+}

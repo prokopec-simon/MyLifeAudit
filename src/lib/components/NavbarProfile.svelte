@@ -38,6 +38,7 @@
 		<button
 			class="ml-2 cursor-pointer border-none bg-none"
 			on:click={toggleProfileDropdown}
+			id="profileToggleButton"
 		>
 			<MdiChevronDown />
 		</button>
@@ -45,6 +46,7 @@
 	<Dropdown
 		bind:options={$dropdownStore.options}
 		bind:isOpen={$dropdownStore.isOpen}
+		toggleButtonRef={'#profileToggleButton'}
 	/>
 {:else}
 	<button

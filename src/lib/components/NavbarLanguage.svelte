@@ -90,6 +90,7 @@
 
 <button
 	class="bg-accent rounded px-4 py-2 text-white"
+	id="languageToggleButton"
 	on:click={toggleLanguageDropdown}
 >
 	<svelte:component
@@ -102,4 +103,5 @@
 <Dropdown
 	bind:options={$languageStore.languageOptions}
 	bind:isOpen={$languageStore.isOpen}
+	toggleButtonRef={'#languageToggleButton'}
 />

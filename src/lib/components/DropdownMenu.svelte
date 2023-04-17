@@ -1,9 +1,9 @@
 <!-- Dropdown.svelte -->
 <script lang="ts">
-	// Import icons dynamically
 	import CircleFlagsCz from '~icons/circle-flags/cz';
 	import CircleFlagsUs from '~icons/circle-flags/us';
 	import MdiCheckboxBlankCircle from '~icons/mdi/checkbox-blank-circle';
+	import { clickOutside } from '../../helpers/clickOutside';
 
 	const icons = {
 		cz: CircleFlagsCz,
@@ -12,6 +12,11 @@
 		// Add more icons here
 	};
 
+	function handleClickOutside(event) {
+		isOpen = false;
+	}
+
+	export let toggleButtonRef: string;
 	export let options: {
 		id: number;
 		value?: string;
@@ -27,7 +32,11 @@
 	}
 </script>
 
-<div class="relative inline-block">
+<div
+	class="relative inline-block"
+	use:clickOutside={(this, toggleButtonRef)}
+	on:click_outside={handleClickOutside}
+>
 	<ul
 		class="absolute top-full m-0 mt-6 w-32 list-none border border-gray-300 bg-white p-0"
 		class:hidden={!isOpen}
