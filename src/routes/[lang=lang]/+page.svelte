@@ -33,7 +33,9 @@
 	</div>
 </section>
 <section class="flex h-screen flex-col">
-	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
+	<div
+		class="container mx-auto flex w-4/5 flex-col items-center justify-center px-8 md:flex-row"
+	>
 		<div class="w-1/2">
 			<img
 				src="https://via.placeholder.com/400"
@@ -48,7 +50,9 @@
 			</p>
 		</div>
 	</div>
-	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
+	<div
+		class="container mx-auto flex w-4/5 flex-col items-center justify-center px-8 md:flex-row"
+	>
 		<div class="w-1/2 p-8">
 			<p class="text-center text-xl">
 				<span class="font-bold">{$LL.JOIN_US_CONTRIBUTE()}</span>
@@ -63,7 +67,9 @@
 			/>
 		</div>
 	</div>
-	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
+	<div
+		class="container mx-auto flex w-4/5 flex-col items-center justify-center px-8 md:flex-row"
+	>
 		<div class="w-1/2">
 			<img
 				src="https://via.placeholder.com/400"
@@ -78,7 +84,9 @@
 			</p>
 		</div>
 	</div>
-	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
+	<div
+		class="container mx-auto flex w-4/5 flex-col items-center justify-center px-8 md:flex-row"
+	>
 		<div class="w-1/2 p-8">
 			<p class="text-center text-xl">
 				<span class="font-bold">{$LL.JOIN_US_LEARN_FROM_OTHERS()}</span>

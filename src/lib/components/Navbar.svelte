@@ -2,7 +2,6 @@
 	import NavbarLanguage from './NavbarLanguage.svelte';
 	import NavbarProfile from './NavbarProfile.svelte';
 	import LL from '../../i18n/i18n-svelte';
-	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
 	import NavbarTheme from './NavbarTheme.svelte';
 
 	let isSidePanelMenuOpen = false;
