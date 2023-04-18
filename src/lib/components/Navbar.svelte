@@ -13,8 +13,8 @@
 	let navigationOptions = [
 		{ title: 'NAV_ABOUT', link: '/about' },
 		{ title: 'NAV_JOIN_US', link: '/join-us' },
-		{ title: 'NAV_RESOURCES', link: '/resources' },
 		{ title: 'NAV_CONTACT', link: '/contact' },
+		{ title: 'NAV_RESOURCES', link: '/resources' },
 	];
 </script>
 

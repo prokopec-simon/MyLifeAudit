@@ -24,6 +24,13 @@ const en: BaseTranslation = {
 	JOIN_US_LEARN_FROM_OTHERS_DESCRIPTION:
 		'You can learn from others by receiving help and guidance on various aspects of life.',
 	log: `This log was called from '{fileName:string}'`,
+	CONTACT_FORM_TITLE: 'Contact Us',
+	CONTACT_FORM_SUBMIT: 'Send',
+	CONTACT_FORM_NAME: 'Name',
+	CONTACT_FORM_EMAIL: 'Email',
+	CONTACT_FORM_MESSAGE: 'Message',
+	FOOTER_TOS: 'Terms of Service',
+	FOOTER_PRIVACY: 'Privacy Policy',
 };
 
 export default en;

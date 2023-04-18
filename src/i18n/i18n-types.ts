@@ -87,6 +87,34 @@ type RootTranslation = {
 	 * @param {string} fileName
 	 */
 	log: RequiredParams<'fileName'>
+	/**
+	 * C​o​n​t​a​c​t​ ​U​s
+	 */
+	CONTACT_FORM_TITLE: string
+	/**
+	 * S​e​n​d
+	 */
+	CONTACT_FORM_SUBMIT: string
+	/**
+	 * N​a​m​e
+	 */
+	CONTACT_FORM_NAME: string
+	/**
+	 * E​m​a​i​l
+	 */
+	CONTACT_FORM_EMAIL: string
+	/**
+	 * M​e​s​s​a​g​e
+	 */
+	CONTACT_FORM_MESSAGE: string
+	/**
+	 * T​e​r​m​s​ ​o​f​ ​S​e​r​v​i​c​e
+	 */
+	FOOTER_TOS: string
+	/**
+	 * P​r​i​v​a​c​y​ ​P​o​l​i​c​y
+	 */
+	FOOTER_PRIVACY: string
 }
 
 export type TranslationFunctions = {
@@ -162,6 +190,34 @@ export type TranslationFunctions = {
 	 * This log was called from '{fileName}'
 	 */
 	log: (arg: { fileName: string }) => LocalizedString
+	/**
+	 * Contact Us
+	 */
+	CONTACT_FORM_TITLE: () => LocalizedString
+	/**
+	 * Send
+	 */
+	CONTACT_FORM_SUBMIT: () => LocalizedString
+	/**
+	 * Name
+	 */
+	CONTACT_FORM_NAME: () => LocalizedString
+	/**
+	 * Email
+	 */
+	CONTACT_FORM_EMAIL: () => LocalizedString
+	/**
+	 * Message
+	 */
+	CONTACT_FORM_MESSAGE: () => LocalizedString
+	/**
+	 * Terms of Service
+	 */
+	FOOTER_TOS: () => LocalizedString
+	/**
+	 * Privacy Policy
+	 */
+	FOOTER_PRIVACY: () => LocalizedString
 }
 
 export type Formatters = {}
