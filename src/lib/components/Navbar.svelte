@@ -21,6 +21,7 @@
 <nav class="fixed top-0 z-50 flex h-20 w-full bg-primary">
 	<div class="ml-4 flex flex-1 items-center">
 		<button
+			aria-label="toggleSidePanel"
 			class="mr-4 text-2xl font-bold focus:outline-none md:hidden"
 			on:click={toggleSidePanelMenu}
 		>

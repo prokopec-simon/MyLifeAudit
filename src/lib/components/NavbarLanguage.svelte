@@ -91,6 +91,7 @@
 <button
 	class="bg-accent rounded px-4 py-2 text-white"
 	id="languageToggleButton"
+	aria-label="toggleLanguageDropdown"
 	on:click={toggleLanguageDropdown}
 >
 	<svelte:component

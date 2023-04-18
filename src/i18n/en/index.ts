@@ -31,6 +31,9 @@ const en: BaseTranslation = {
 	CONTACT_FORM_MESSAGE: 'Message',
 	FOOTER_TOS: 'Terms of Service',
 	FOOTER_PRIVACY: 'Privacy Policy',
+	DROPDOWN_PROFILE_SIGN_OUT: 'Sign Out',
+	SIGN_IN_TITLE: 'Sign In',
+	DROPDOWN_PROFILE_HISTORY: 'My story',
 };
 
 export default en;

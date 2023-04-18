@@ -61,6 +61,7 @@
 <button
 	class="bg-accent rounded px-4 py-2 text-white"
 	id="themeToggleButton"
+	aria-label="toggleThemeDropdown"
 	on:click={toggleLanguageDropdown}
 >
 	<MdiCheckboxBlankCircle color="hsl(var(--twc-primary))" />

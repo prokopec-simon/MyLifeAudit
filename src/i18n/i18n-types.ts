@@ -115,6 +115,18 @@ type RootTranslation = {
 	 * P​r​i​v​a​c​y​ ​P​o​l​i​c​y
 	 */
 	FOOTER_PRIVACY: string
+	/**
+	 * S​i​g​n​ ​O​u​t
+	 */
+	DROPDOWN_PROFILE_SIGN_OUT: string
+	/**
+	 * S​i​g​n​ ​I​n
+	 */
+	SIGN_IN_TITLE: string
+	/**
+	 * M​y​ ​s​t​o​r​y
+	 */
+	DROPDOWN_PROFILE_HISTORY: string
 }
 
 export type TranslationFunctions = {
@@ -218,6 +230,18 @@ export type TranslationFunctions = {
 	 * Privacy Policy
 	 */
 	FOOTER_PRIVACY: () => LocalizedString
+	/**
+	 * Sign Out
+	 */
+	DROPDOWN_PROFILE_SIGN_OUT: () => LocalizedString
+	/**
+	 * Sign In
+	 */
+	SIGN_IN_TITLE: () => LocalizedString
+	/**
+	 * My story
+	 */
+	DROPDOWN_PROFILE_HISTORY: () => LocalizedString
 }
 
 export type Formatters = {}
