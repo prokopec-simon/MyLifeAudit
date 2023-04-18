@@ -116,6 +116,10 @@ type RootTranslation = {
 	 */
 	FOOTER_PRIVACY: string
 	/**
+	 * C​o​n​t​a​c​t​ ​U​s
+	 */
+	FOOTER_CONTACT: string
+	/**
 	 * S​i​g​n​ ​O​u​t
 	 */
 	DROPDOWN_PROFILE_SIGN_OUT: string
@@ -230,6 +234,10 @@ export type TranslationFunctions = {
 	 * Privacy Policy
 	 */
 	FOOTER_PRIVACY: () => LocalizedString
+	/**
+	 * Contact Us
+	 */
+	FOOTER_CONTACT: () => LocalizedString
 	/**
 	 * Sign Out
 	 */

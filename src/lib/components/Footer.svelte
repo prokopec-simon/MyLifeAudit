@@ -12,11 +12,11 @@
 					{$LL.FOOTER_TOS()}
 				</a>
 				<a href="/" class="mb-2 text-gray-700 hover:text-blue-500">
-					{$LL.FOOTER_PRIVACY}
+					{$LL.FOOTER_PRIVACY()}
 				</a>
 			</div>
 			<div class="flex w-full flex-col md:w-1/2">
-				<h2 class="mb-2 text-lg font-semibold">Contact us</h2>
+				<h2 class="mb-2 text-lg font-semibold">{$LL.FOOTER_CONTACT()}</h2>
 				<p class="mb-2 text-gray-700">Email: support@mylifeaudit.org</p>
 				<div class="flex flex-row">
 					<IcRoundDiscord
