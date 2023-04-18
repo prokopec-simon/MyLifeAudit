@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { LL } from '$i18n/i18n-svelte';
+	import Footer from '../../lib/components/Footer.svelte';
 </script>
 
 <main
@@ -102,3 +103,4 @@
 		</div>
 	</div>
 </section>
+<Footer />
