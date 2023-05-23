@@ -2,7 +2,8 @@ import type { BaseTranslation } from '../i18n-types';
 
 const en: BaseTranslation = {
 	PAGE_TITLE: 'My Life Audit',
-	BRAND_CLAIM: 'Take back control of your life',
+	BRAND_CLAIM:
+		'Take back charge of your life and create the future you desire.	',
 	BUTTON_AUDIT_NOW: 'Start an audit now!',
 	NAV_ABOUT: 'About',
 	NAV_CONTACT: 'Contact',

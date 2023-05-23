@@ -8,7 +8,7 @@ export const colors = {
 	dark: {
 		primary: '#2B2826',
 		secondary: '#E9C46A',
-		brand: '#A3D2CA',
+		brand: '#3AA89B',
 		text_primary: '#FFFFFF',
 	},
 };

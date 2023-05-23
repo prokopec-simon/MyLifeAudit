@@ -48,7 +48,7 @@
 {:else}
 	<button
 		on:click={() => signIn()}
-		class="button rounded-md bg-brand px-4 py-2 text-primary"
-		>{$LL.DROPDOWN_PROFILE_SIGN_OUT()}</button
+		class="button w-24 rounded-md bg-brand px-4 py-2 text-white"
+		>{$LL.SIGN_IN_TITLE()}</button
 	>
 {/if}

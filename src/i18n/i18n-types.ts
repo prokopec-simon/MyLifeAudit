@@ -19,7 +19,7 @@ type RootTranslation = {
 	 */
 	PAGE_TITLE: string
 	/**
-	 * T​a​k​e​ ​b​a​c​k​ ​c​o​n​t​r​o​l​ ​o​f​ ​y​o​u​r​ ​l​i​f​e
+	 * T​a​k​e​ ​b​a​c​k​ ​c​h​a​r​g​e​ ​o​f​ ​y​o​u​r​ ​l​i​f​e​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​f​u​t​u​r​e​ ​y​o​u​ ​d​e​s​i​r​e​.​
 	 */
 	BRAND_CLAIM: string
 	/**
@@ -139,7 +139,7 @@ export type TranslationFunctions = {
 	 */
 	PAGE_TITLE: () => LocalizedString
 	/**
-	 * Take back control of your life
+	 * Take back charge of your life and create the future you desire.
 	 */
 	BRAND_CLAIM: () => LocalizedString
 	/**

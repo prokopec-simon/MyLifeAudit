@@ -44,7 +44,7 @@
 	on:click_outside={handleClickOutside}
 >
 	<ul
-		class="absolute left-auto right-0 top-full mt-6 w-32 list-none border border-gray-300 bg-white p-0"
+		class="absolute left-auto right-0 top-full mt-6 w-32 list-none border border-gray-300 bg-white p-0 text-black"
 		class:hidden={!isOpen}
 	>
 		{#each options as option (option.id)}

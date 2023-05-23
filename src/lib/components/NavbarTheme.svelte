@@ -13,61 +13,52 @@
 	import CircleFlagsUs from '~icons/circle-flags/us';
 	import MdiCheckboxBlankCircle from '~icons/mdi/checkbox-blank-circle';
 	import { colors } from '../../colorThemes';
+	import { onMount } from 'svelte';
+	import SolarSun2Bold from '~icons/solar/sun-2-bold';
+	import PhMoonFill from '~icons/ph/moon-fill';
 
-	function changeColorTheme(newTheme: string) {
+	const themeStore = writable('');
+
+	onMount(() => {
+		themeStore.set(getTheme());
+	});
+
+	function getTheme() {
+		if (typeof document === 'undefined') {
+			return ''; // Return an empty string if document is not defined
+		}
+
 		const themePrefix = 'theme-';
-		const currentTheme = document.documentElement.className
-			.split(' ')
-			.find((className) => className.startsWith(themePrefix));
+		const currentTheme = Array.from(document.documentElement.classList).find(
+			(className) => className.startsWith(themePrefix)
+		);
+
+		return currentTheme || '';
+	}
+
+	function changeColorTheme() {
+		const themePrefix = 'theme-';
+		const currentTheme = Array.from(document.documentElement.classList).find(
+			(className) => className.startsWith(themePrefix)
+		);
+
 		if (currentTheme) {
 			document.documentElement.classList.remove(currentTheme);
 		}
-		if (newTheme !== '') {
-			document.documentElement.classList.add(`${themePrefix}${newTheme}`);
-		}
-	}
 
-	const languageStore = writable({
-		languageOptions: [
-			{
-				id: 1,
-				icon: 'circle',
-				value: 'Light',
-				color: colors.light.primary,
-				onClick: () => {
-					changeColorTheme('light');
-				},
-			},
-			{
-				id: 2,
-				icon: 'circle',
-				value: 'Dark',
-				color: colors.dark.primary,
-				onClick: () => {
-					changeColorTheme('dark');
-				},
-			},
-		],
-		isOpen: false,
-	});
-
-	function toggleLanguageDropdown() {
-		languageStore.update((store) => {
-			return { ...store, isOpen: !store.isOpen };
-		});
+		const newTheme =
+			currentTheme === 'theme-light' ? 'theme-dark' : 'theme-light';
+		document.documentElement.classList.add(newTheme);
+		themeStore.set(newTheme);
 	}
 </script>
 
-<button
-	class="bg-accent rounded px-4 py-2 text-white"
-	id="themeToggleButton"
-	aria-label="toggleThemeDropdown"
-	on:click={toggleLanguageDropdown}
->
-	<MdiCheckboxBlankCircle color="hsl(var(--twc-primary))" />
-</button>
-<Dropdown
-	bind:options={$languageStore.languageOptions}
-	bind:isOpen={$languageStore.isOpen}
-	toggleButtonRef={'#themeToggleButton'}
-/>
+<div>
+	<button on:click={() => changeColorTheme()} class="mr-2 mt-2 text-xl">
+		{#if $themeStore === 'theme-light'}
+			<SolarSun2Bold />
+		{:else}
+			<PhMoonFill />
+		{/if}
+	</button>
+</div>

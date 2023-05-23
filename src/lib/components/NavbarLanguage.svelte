@@ -89,7 +89,7 @@
 </script>
 
 <button
-	class="bg-accent rounded px-4 py-2 text-white"
+	class="bg-accent rounded py-2 pr-2 text-white md:pr-4"
 	id="languageToggleButton"
 	aria-label="toggleLanguageDropdown"
 	on:click={toggleLanguageDropdown}
