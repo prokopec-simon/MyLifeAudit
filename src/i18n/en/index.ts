@@ -11,7 +11,10 @@ const en: BaseTranslation = {
 	NAV_JOIN_US: 'Join us',
 	ABOUT_TITLE: 'About Us',
 	ABOUT_CONTENT:
-		"If you feel like you need to do a Life Audit, you'll realize that you should have done this a long time ago. Well, it's never too late to retake control of your life. Our mission is to provide you with a comprehensive evaluation of your life and actionable recommendations for improvement. With our expert guidance, you can gain valuable insights into various aspects of your life, such as health, relationships, career, and personal growth. Our goal is to empower you to make informed decisions and take steps towards a happier, healthier, and more fulfilling life.",
+		'The modern world is a fast-paced, chaotic, and difficult place. Many people struggle with managing their lifestyle, free time, relationships, and life goals. This can easily lead to a downward spiraling trend that is really difficult to overcome.',
+	ABOUT_CLAIM: "We're here to help!",
+	ABOUT_CONTENT_P2: `
+	We believe that the first step to regaining control over your life starts with realization. This tool is here to help you assess the current state of your life and guide you towards living fully again. It will still require a lot of work, but you can do it.`,
 	JOIN_US_TITLE: 'Join Us',
 	JOIN_US_CONTENT:
 		'Join our community and be a part of something meaningful. Help create something that benefits others and makes a positive impact on their lives. Contribute to a meaningful project. You can help others by providing valuable insights and support through our platform. Improve your life quality. You can improve your own life by engaging in a hobby or activity that enhances your personal growth and meet new people with similar interests. Learn from others. You can learn from others by receiving help and guidance on various aspects of life.',

@@ -47,9 +47,18 @@ type RootTranslation = {
 	 */
 	ABOUT_TITLE: string
 	/**
-	 * I​f​ ​y​o​u​ ​f​e​e​l​ ​l​i​k​e​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​d​o​ ​a​ ​L​i​f​e​ ​A​u​d​i​t​,​ ​y​o​u​'​l​l​ ​r​e​a​l​i​z​e​ ​t​h​a​t​ ​y​o​u​ ​s​h​o​u​l​d​ ​h​a​v​e​ ​d​o​n​e​ ​t​h​i​s​ ​a​ ​l​o​n​g​ ​t​i​m​e​ ​a​g​o​.​ ​W​e​l​l​,​ ​i​t​'​s​ ​n​e​v​e​r​ ​t​o​o​ ​l​a​t​e​ ​t​o​ ​r​e​t​a​k​e​ ​c​o​n​t​r​o​l​ ​o​f​ ​y​o​u​r​ ​l​i​f​e​.​ ​O​u​r​ ​m​i​s​s​i​o​n​ ​i​s​ ​t​o​ ​p​r​o​v​i​d​e​ ​y​o​u​ ​w​i​t​h​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​v​a​l​u​a​t​i​o​n​ ​o​f​ ​y​o​u​r​ ​l​i​f​e​ ​a​n​d​ ​a​c​t​i​o​n​a​b​l​e​ ​r​e​c​o​m​m​e​n​d​a​t​i​o​n​s​ ​f​o​r​ ​i​m​p​r​o​v​e​m​e​n​t​.​ ​W​i​t​h​ ​o​u​r​ ​e​x​p​e​r​t​ ​g​u​i​d​a​n​c​e​,​ ​y​o​u​ ​c​a​n​ ​g​a​i​n​ ​v​a​l​u​a​b​l​e​ ​i​n​s​i​g​h​t​s​ ​i​n​t​o​ ​v​a​r​i​o​u​s​ ​a​s​p​e​c​t​s​ ​o​f​ ​y​o​u​r​ ​l​i​f​e​,​ ​s​u​c​h​ ​a​s​ ​h​e​a​l​t​h​,​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​,​ ​c​a​r​e​e​r​,​ ​a​n​d​ ​p​e​r​s​o​n​a​l​ ​g​r​o​w​t​h​.​ ​O​u​r​ ​g​o​a​l​ ​i​s​ ​t​o​ ​e​m​p​o​w​e​r​ ​y​o​u​ ​t​o​ ​m​a​k​e​ ​i​n​f​o​r​m​e​d​ ​d​e​c​i​s​i​o​n​s​ ​a​n​d​ ​t​a​k​e​ ​s​t​e​p​s​ ​t​o​w​a​r​d​s​ ​a​ ​h​a​p​p​i​e​r​,​ ​h​e​a​l​t​h​i​e​r​,​ ​a​n​d​ ​m​o​r​e​ ​f​u​l​f​i​l​l​i​n​g​ ​l​i​f​e​.
+	 * T​h​e​ ​m​o​d​e​r​n​ ​w​o​r​l​d​ ​i​s​ ​a​ ​f​a​s​t​-​p​a​c​e​d​,​ ​c​h​a​o​t​i​c​,​ ​a​n​d​ ​d​i​f​f​i​c​u​l​t​ ​p​l​a​c​e​.​ ​M​a​n​y​ ​p​e​o​p​l​e​ ​s​t​r​u​g​g​l​e​ ​w​i​t​h​ ​m​a​n​a​g​i​n​g​ ​t​h​e​i​r​ ​l​i​f​e​s​t​y​l​e​,​ ​f​r​e​e​ ​t​i​m​e​,​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​,​ ​a​n​d​ ​l​i​f​e​ ​g​o​a​l​s​.​ ​T​h​i​s​ ​c​a​n​ ​e​a​s​i​l​y​ ​l​e​a​d​ ​t​o​ ​a​ ​d​o​w​n​w​a​r​d​ ​s​p​i​r​a​l​i​n​g​ ​t​r​e​n​d​ ​t​h​a​t​ ​i​s​ ​r​e​a​l​l​y​ ​d​i​f​f​i​c​u​l​t​ ​t​o​ ​o​v​e​r​c​o​m​e​.
 	 */
 	ABOUT_CONTENT: string
+	/**
+	 * W​e​'​r​e​ ​h​e​r​e​ ​t​o​ ​h​e​l​p​!
+	 */
+	ABOUT_CLAIM: string
+	/**
+	 * 
+​	​W​e​ ​b​e​l​i​e​v​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​r​s​t​ ​s​t​e​p​ ​t​o​ ​r​e​g​a​i​n​i​n​g​ ​c​o​n​t​r​o​l​ ​o​v​e​r​ ​y​o​u​r​ ​l​i​f​e​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​r​e​a​l​i​z​a​t​i​o​n​.​ ​T​h​i​s​ ​t​o​o​l​ ​i​s​ ​h​e​r​e​ ​t​o​ ​h​e​l​p​ ​y​o​u​ ​a​s​s​e​s​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​y​o​u​r​ ​l​i​f​e​ ​a​n​d​ ​g​u​i​d​e​ ​y​o​u​ ​t​o​w​a​r​d​s​ ​l​i​v​i​n​g​ ​f​u​l​l​y​ ​a​g​a​i​n​.​ ​I​t​ ​w​i​l​l​ ​s​t​i​l​l​ ​r​e​q​u​i​r​e​ ​a​ ​l​o​t​ ​o​f​ ​w​o​r​k​,​ ​b​u​t​ ​y​o​u​ ​c​a​n​ ​d​o​ ​i​t​.
+	 */
+	ABOUT_CONTENT_P2: string
 	/**
 	 * J​o​i​n​ ​U​s
 	 */
@@ -177,9 +186,18 @@ export type TranslationFunctions = {
 	 */
 	ABOUT_TITLE: () => LocalizedString
 	/**
-	 * If you feel like you need to do a Life Audit, you'll realize that you should have done this a long time ago. Well, it's never too late to retake control of your life. Our mission is to provide you with a comprehensive evaluation of your life and actionable recommendations for improvement. With our expert guidance, you can gain valuable insights into various aspects of your life, such as health, relationships, career, and personal growth. Our goal is to empower you to make informed decisions and take steps towards a happier, healthier, and more fulfilling life.
+	 * The modern world is a fast-paced, chaotic, and difficult place. Many people struggle with managing their lifestyle, free time, relationships, and life goals. This can easily lead to a downward spiraling trend that is really difficult to overcome.
 	 */
 	ABOUT_CONTENT: () => LocalizedString
+	/**
+	 * We're here to help!
+	 */
+	ABOUT_CLAIM: () => LocalizedString
+	/**
+	 * 
+	We believe that the first step to regaining control over your life starts with realization. This tool is here to help you assess the current state of your life and guide you towards living fully again. It will still require a lot of work, but you can do it.
+	 */
+	ABOUT_CONTENT_P2: () => LocalizedString
 	/**
 	 * Join Us
 	 */

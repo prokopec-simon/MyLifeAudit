@@ -31,28 +31,25 @@
 	id="about"
 >
 	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
-		<div class="w-100 p-1 md:p-8">
+		<div class="w-100 py-12 md:py-16">
 			<h2 class="mb-4 text-center text-3xl font-semibold">
 				{$LL.ABOUT_TITLE()}
 			</h2>
-			<p class="text-center">
+			<p class="text-lg md:text-xl">
 				{$LL.ABOUT_CONTENT()}
 			</p>
+			<h2 class="py-4 text-xl font-semibold md:text-2xl">
+				{$LL.ABOUT_CLAIM()}
+			</h2>
+			<p class="text-lg md:text-xl">{$LL.ABOUT_CONTENT_P2()}</p>
 		</div>
 	</div>
 </section>
-<section class="flex flex-col">
+<section class="flex flex-col bg-primary">
 	<div
 		class="container mx-auto flex w-4/5 flex-col items-center justify-center md:flex-row"
 	>
-		<div class="w-1/2">
-			<img
-				src="https://via.placeholder.com/400"
-				alt="Placeholder"
-				class="mx-auto sm:mx-0 sm:mt-4"
-			/>
-		</div>
-		<div class="w-1/2 p-1 md:p-8">
+		<div class="p-1 md:p-8">
 			<h2 class="mb-4 text-center text-3xl font-bold">{$LL.JOIN_US_TITLE()}</h2>
 			<p class="text-center text-xl">
 				{$LL.JOIN_US_CONTENT()}
