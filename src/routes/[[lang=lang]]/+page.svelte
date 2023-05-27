@@ -3,7 +3,7 @@
 	import Footer from '../../lib/components/Footer.svelte';
 	import ContactForm from '../../lib/components/ContactForm.svelte';
 	import { goto } from '$app/navigation';
-	import { setLocale, locale } from '../../i18n/i18n-svelte';
+	import { locale } from '../../i18n/i18n-svelte';
 	import { slide } from 'svelte/transition';
 </script>
 
@@ -25,7 +25,11 @@
 		>
 	</div>
 </main>
-<section class="mt-0 flex bg-brand_teal">
+<section
+	class="mt-0 flex scroll-mt-24 bg-primary_off text-text_primary
+	"
+	id="about"
+>
 	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
 		<div class="w-100 p-1 md:p-8">
 			<h2 class="mb-4 text-center text-3xl font-semibold">

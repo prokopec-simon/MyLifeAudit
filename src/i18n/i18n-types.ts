@@ -136,10 +136,10 @@ type RootTranslation = {
 		 * H​o​w​ ​o​l​d​ ​a​r​e​ ​y​o​u​?
 		 */
 		question: string
-		/**
-		 * n​u​m​I​n​p​u​t
-		 */
-		type: string
+		type: {
+			a: {
+			}
+		}
 	}
 }
 
@@ -265,10 +265,10 @@ export type TranslationFunctions = {
 		 * How old are you?
 		 */
 		question: () => LocalizedString
-		/**
-		 * numInput
-		 */
-		type: () => LocalizedString
+		type: {
+			a: {
+			}
+		}
 	}
 }
 

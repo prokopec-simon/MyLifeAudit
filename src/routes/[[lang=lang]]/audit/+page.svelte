@@ -5,4 +5,5 @@
 
 <main transition:slide class="min-h-screen bg-primary">
 	<div class="mt-16 text-text_primary">{$LL.AGE.question()}</div>
+	{$LL.AGE.type}
 </main>

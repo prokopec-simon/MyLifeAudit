@@ -3,6 +3,8 @@
 	import NavbarProfile from './NavbarProfile.svelte';
 	import LL from '../../i18n/i18n-svelte';
 	import NavbarTheme from './NavbarTheme.svelte';
+	import { goto } from '$app/navigation';
+	import { locale } from '../../i18n/i18n-svelte';
 
 	let isSidePanelMenuOpen = false;
 	function toggleSidePanelMenu() {
@@ -11,7 +13,7 @@
 
 	let about = $LL.NAV_ABOUT();
 	let navigationOptions = [
-		{ title: 'NAV_ABOUT', link: '/about' },
+		{ title: 'NAV_ABOUT', link: '/#about' },
 		{ title: 'NAV_JOIN_US', link: '/join-us' },
 		{ title: 'NAV_CONTACT', link: '/contact' },
 		{ title: 'NAV_RESOURCES', link: '/resources' },
@@ -47,7 +49,12 @@
 			</button>
 			<div class="hidden md:flex md:items-center">
 				{#each navigationOptions as option (option.title)}
-					<a href={option.link} class="ml-4">{$LL[option.title]()}</a>
+					<button
+						class="mr-4 hover:text-gray-400"
+						on:click={() => {
+							goto($locale + option.link);
+						}}>{$LL[option.title]()}</button
+					>
 				{/each}
 			</div>
 		</div>
@@ -69,8 +76,11 @@
 		<ul class="space-y-2">
 			{#each navigationOptions as option (option.title)}
 				<li>
-					<a class="hover:text-gray-400" href={option.link}
-						>{$LL[option.title]()}</a
+					<button
+						class="hover:text-gray-400"
+						on:click={() => {
+							goto($locale + '/' + option.link);
+						}}>{$LL[option.title]()}</button
 					>
 				</li>
 			{/each}

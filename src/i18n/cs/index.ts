@@ -38,8 +38,8 @@ const baseCs: BaseTranslation = {
 };
 
 const auditQuestionare: BaseTranslation = {
-	AGE:{question:"How old are you?",type:"numInput"}
-}
+	AGE: { question: 'How old are you?', type: 'a' },
+};
 
-const cs = {...baseCs,...auditQuestionare}
+const cs = { ...baseCs, ...auditQuestionare };
 export default cs;
