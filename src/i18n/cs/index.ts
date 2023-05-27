@@ -1,6 +1,6 @@
 import type { BaseTranslation } from '../i18n-types.js';
 
-const cs: BaseTranslation = {
+const baseCs: BaseTranslation = {
 	PAGE_TITLE: 'Můj životní audit',
 	BRAND_CLAIM:
 		'Převezměte kontrolu nad svým životem a vytvořte si budoucnost, kterou si přejete.',
@@ -37,4 +37,9 @@ const cs: BaseTranslation = {
 	DROPDOWN_PROFILE_HISTORY: 'Moje historie',
 };
 
+const auditQuestionare: BaseTranslation = {
+	AGE:{question:"How old are you?",type:"numInput"}
+}
+
+const cs = {...baseCs,...auditQuestionare}
 export default cs;

@@ -1,12 +1,14 @@
 export const colors = {
 	light: {
 		primary: '#F6F4EE',
-		brand: '#3AA89B',
-		text_primary: '#000000',
+		brand_teal: '#3AA89B',
+		brand_brick: '#E26D5A',
+		text_primary: '#1A090D',
 	},
 	dark: {
-		primary: '#012627',
-		brand: '#3AA89B',
-		text_primary: '#FFFFFF',
+		primary: '#1A090D',
+		brand_teal: '#3AA89B',
+		brand_brick: '#E26D5A',
+		text_primary: '#F6F4EE',
 	},
 };

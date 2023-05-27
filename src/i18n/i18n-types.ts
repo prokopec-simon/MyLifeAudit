@@ -131,6 +131,16 @@ type RootTranslation = {
 	 * M​y​ ​s​t​o​r​y
 	 */
 	DROPDOWN_PROFILE_HISTORY: string
+	AGE: {
+		/**
+		 * H​o​w​ ​o​l​d​ ​a​r​e​ ​y​o​u​?
+		 */
+		question: string
+		/**
+		 * n​u​m​I​n​p​u​t
+		 */
+		type: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -250,6 +260,16 @@ export type TranslationFunctions = {
 	 * My story
 	 */
 	DROPDOWN_PROFILE_HISTORY: () => LocalizedString
+	AGE: {
+		/**
+		 * How old are you?
+		 */
+		question: () => LocalizedString
+		/**
+		 * numInput
+		 */
+		type: () => LocalizedString
+	}
 }
 
 export type Formatters = {}

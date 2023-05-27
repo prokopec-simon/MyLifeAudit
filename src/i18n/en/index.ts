@@ -38,4 +38,8 @@ const en: BaseTranslation = {
 	DROPDOWN_PROFILE_HISTORY: 'My story',
 };
 
-export default en;
+const auditQuestionare: BaseTranslation = {
+	AGE:{question:"How old are you?",type:"numInput"}
+}
+
+export default {...en, ...auditQuestionare};

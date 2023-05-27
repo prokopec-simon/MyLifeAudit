@@ -31,7 +31,7 @@
 				name="email"
 				aria-label="email"
 				required
-				class="mb-4 w-full rounded border border-gray-300 px-3 py-2 focus:border-brand focus:outline-none"
+				class="mb-4 w-full rounded border border-gray-300 px-3 py-2"
 			/>
 			<label for="message" class="mb-2 block font-medium text-gray-700">
 				<span>{$LL.CONTACT_FORM_MESSAGE()}</span>
@@ -41,12 +41,12 @@
 				aria-label="name"
 				required
 				rows="6"
-				class="mb-4 w-full resize-none rounded border border-gray-300 px-3 py-2 focus:border-brand focus:outline-none"
+				class="mb-4 w-full resize-none rounded border border-gray-300 px-3 py-2"
 			/>
 			<input
 				type="submit"
 				value={$LL.CONTACT_FORM_SUBMIT()}
-				class="w-full rounded bg-brand px-4 py-2 font-medium text-white focus:outline-none"
+				class="bg-brand w-full rounded px-4 py-2 font-medium text-white focus:outline-none"
 			/>
 		</form>
 	</div>

@@ -27,18 +27,18 @@
 				on:click={toggleSidePanelMenu}
 			>
 				<span
-					class="mb-1 block h-1 w-6 transform bg-white transition duration-500 ease-in-out"
+					class="mb-1 block h-1 w-6 transform bg-text_primary transition duration-500 ease-in-out"
 					class:rotate-45={isSidePanelMenuOpen}
 					class:-translate-y-1.5={isSidePanelMenuOpen}
 					class:rotate-0={!isSidePanelMenuOpen}
 					class:translate-y-0={!isSidePanelMenuOpen}
 				/>
 				<span
-					class="mb-1 block h-1 w-6 bg-white opacity-0 transition duration-500 ease-in-out"
+					class="mb-1 block h-1 w-6 bg-text_primary opacity-0 transition duration-500 ease-in-out"
 					class:opacity-100={isSidePanelMenuOpen}
 				/>
 				<span
-					class="mb-0 block h-1 w-6 transform bg-white transition duration-500 ease-in-out"
+					class="mb-0 block h-1 w-6 transform bg-text_primary transition duration-500 ease-in-out"
 					class:-rotate-45={isSidePanelMenuOpen}
 					class:translate-y-1.5={isSidePanelMenuOpen}
 					class:rotate-0={!isSidePanelMenuOpen}
