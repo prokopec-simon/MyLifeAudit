@@ -27,6 +27,10 @@ type RootTranslation = {
 	 */
 	BUTTON_AUDIT_NOW: string
 	/**
+	 * A​u​d​i​t
+	 */
+	NAV_AUDIT: string
+	/**
 	 * A​b​o​u​t
 	 */
 	NAV_ABOUT: string
@@ -35,13 +39,21 @@ type RootTranslation = {
 	 */
 	NAV_CONTACT: string
 	/**
-	 * S​o​u​r​c​e​s
+	 * R​e​s​o​u​r​c​e​s
 	 */
 	NAV_RESOURCES: string
 	/**
 	 * J​o​i​n​ ​u​s
 	 */
 	NAV_JOIN_US: string
+	/**
+	 * C​o​n​t​r​i​b​u​t​e
+	 */
+	NAV_CONTRIBUTE: string
+	/**
+	 * C​o​m​m​u​n​i​t​y
+	 */
+	NAV_COMMUNITY: string
 	/**
 	 * A​b​o​u​t​ ​U​s
 	 */
@@ -60,37 +72,45 @@ type RootTranslation = {
 	 */
 	ABOUT_CONTENT_P2: string
 	/**
-	 * J​o​i​n​ ​U​s
+	 * T​h​e​ ​C​o​m​m​u​n​i​t​y
 	 */
-	JOIN_US_TITLE: string
+	COMMUNITY_TITLE: string
+	/**
+	 * W​e​ ​w​a​n​t​ ​t​o​ ​b​u​i​l​d​ ​t​h​i​s​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​y​o​u​,​ ​w​i​t​h​ ​y​o​u​.​ ​E​v​e​r​y​t​h​i​n​g​ ​i​n​ ​l​i​f​e​ ​i​s​ ​e​a​s​i​e​r​ ​w​h​e​n​ ​y​o​u​ ​c​a​n​ ​c​o​o​p​e​r​a​t​e​ ​w​i​t​h​ ​s​a​m​e​ ​m​i​n​d​e​d​ ​p​e​o​p​l​e​.​ ​C​u​r​r​e​n​t​l​y​ ​t​h​e​ ​m​a​i​n​ ​p​l​a​t​f​o​r​m​ ​w​e​ ​u​s​e​ ​t​o​ ​s​t​a​y​ ​i​n​ ​t​o​u​c​h​ ​i​s​ ​D​i​s​c​o​r​d​.​ ​C​o​m​e​ ​h​a​n​g​ ​o​u​t​,​ ​s​h​a​r​e​ ​y​o​u​r​ ​p​r​o​b​l​e​m​s​,​ ​y​o​u​r​ ​p​r​o​g​r​e​s​s​ ​o​r​ ​a​n​y​t​h​i​n​g​ ​y​o​u​ ​w​a​n​t​.​ ​M​e​e​t​ ​n​e​w​ ​f​r​i​e​n​d​s​ ​o​r​ ​j​u​s​t​ ​m​a​k​e​ ​s​o​m​e​o​n​e​'​s​ ​d​a​y​ ​a​ ​l​i​t​t​l​e​ ​b​r​i​g​h​t​e​r​.
+	 */
+	COMMUNITY_CONTENT: string
+	/**
+	 * C​o​n​t​r​i​b​u​t​i​o​n
+	 */
+	CONTRIBUTE_TITLE: string
 	/**
 	 * J​o​i​n​ ​o​u​r​ ​c​o​m​m​u​n​i​t​y​ ​a​n​d​ ​b​e​ ​a​ ​p​a​r​t​ ​o​f​ ​s​o​m​e​t​h​i​n​g​ ​m​e​a​n​i​n​g​f​u​l​.​ ​H​e​l​p​ ​c​r​e​a​t​e​ ​s​o​m​e​t​h​i​n​g​ ​t​h​a​t​ ​b​e​n​e​f​i​t​s​ ​o​t​h​e​r​s​ ​a​n​d​ ​m​a​k​e​s​ ​a​ ​p​o​s​i​t​i​v​e​ ​i​m​p​a​c​t​ ​o​n​ ​t​h​e​i​r​ ​l​i​v​e​s​.​ ​C​o​n​t​r​i​b​u​t​e​ ​t​o​ ​a​ ​m​e​a​n​i​n​g​f​u​l​ ​p​r​o​j​e​c​t​.​ ​Y​o​u​ ​c​a​n​ ​h​e​l​p​ ​o​t​h​e​r​s​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​v​a​l​u​a​b​l​e​ ​i​n​s​i​g​h​t​s​ ​a​n​d​ ​s​u​p​p​o​r​t​ ​t​h​r​o​u​g​h​ ​o​u​r​ ​p​l​a​t​f​o​r​m​.​ ​I​m​p​r​o​v​e​ ​y​o​u​r​ ​l​i​f​e​ ​q​u​a​l​i​t​y​.​ ​Y​o​u​ ​c​a​n​ ​i​m​p​r​o​v​e​ ​y​o​u​r​ ​o​w​n​ ​l​i​f​e​ ​b​y​ ​e​n​g​a​g​i​n​g​ ​i​n​ ​a​ ​h​o​b​b​y​ ​o​r​ ​a​c​t​i​v​i​t​y​ ​t​h​a​t​ ​e​n​h​a​n​c​e​s​ ​y​o​u​r​ ​p​e​r​s​o​n​a​l​ ​g​r​o​w​t​h​ ​a​n​d​ ​m​e​e​t​ ​n​e​w​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​s​i​m​i​l​a​r​ ​i​n​t​e​r​e​s​t​s​.​ ​L​e​a​r​n​ ​f​r​o​m​ ​o​t​h​e​r​s​.​ ​Y​o​u​ ​c​a​n​ ​l​e​a​r​n​ ​f​r​o​m​ ​o​t​h​e​r​s​ ​b​y​ ​r​e​c​e​i​v​i​n​g​ ​h​e​l​p​ ​a​n​d​ ​g​u​i​d​a​n​c​e​ ​o​n​ ​v​a​r​i​o​u​s​ ​a​s​p​e​c​t​s​ ​o​f​ ​l​i​f​e​.
 	 */
-	JOIN_US_CONTENT: string
+	CONTRIBUTE_CONTENT: string
 	/**
 	 * C​o​n​t​r​i​b​u​t​e​ ​t​o​ ​m​e​a​n​i​n​g​f​u​l​ ​p​r​o​j​e​c​t
 	 */
-	JOIN_US_CONTRIBUTE: string
+	CONTRIBUTE_CONTRIBUTE: string
 	/**
 	 * Y​o​u​ ​c​a​n​ ​h​e​l​p​ ​o​t​h​e​r​s​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​v​a​l​u​a​b​l​e​ ​i​n​s​i​g​h​t​s​ ​a​n​d​ ​s​u​p​p​o​r​t​ ​t​h​r​o​u​g​h​ ​o​u​r​ ​p​l​a​t​f​o​r​m​.
 	 */
-	JOIN_US_CONTRIBUTE_DESCRIPTION: string
+	CONTRIBUTE_CONTRIBUTE_DESCRIPTION: string
 	/**
 	 * I​m​p​r​o​v​e​ ​y​o​u​r​ ​l​i​f​e​ ​q​u​a​l​i​t​y
 	 */
-	JOIN_US_IMPROVE_LIFE: string
+	CONTRIBUTE_IMPROVE_LIFE: string
 	/**
 	 * Y​o​u​ ​c​a​n​ ​i​m​p​r​o​v​e​ ​y​o​u​r​ ​o​w​n​ ​l​i​f​e​ ​b​y​ ​e​n​g​a​g​i​n​g​ ​i​n​ ​a​ ​h​o​b​b​y​ ​o​r​ ​a​c​t​i​v​i​t​y​ ​t​h​a​t​ ​e​n​h​a​n​c​e​s​ ​y​o​u​r​ ​p​e​r​s​o​n​a​l​ ​g​r​o​w​t​h​ ​a​n​d​ ​m​e​e​t​ ​n​e​w​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​s​i​m​i​l​a​r​ ​i​n​t​e​r​e​s​t​s​.
 	 */
-	JOIN_US_IMPROVE_LIFE_DESCRIPTION: string
+	CONTRIBUTE_IMPROVE_LIFE_DESCRIPTION: string
 	/**
 	 * L​e​a​r​n​ ​f​r​o​m​ ​o​t​h​e​r​s
 	 */
-	JOIN_US_LEARN_FROM_OTHERS: string
+	CONTRIBUTE_LEARN_FROM_OTHERS: string
 	/**
 	 * Y​o​u​ ​c​a​n​ ​l​e​a​r​n​ ​f​r​o​m​ ​o​t​h​e​r​s​ ​b​y​ ​r​e​c​e​i​v​i​n​g​ ​h​e​l​p​ ​a​n​d​ ​g​u​i​d​a​n​c​e​ ​o​n​ ​v​a​r​i​o​u​s​ ​a​s​p​e​c​t​s​ ​o​f​ ​l​i​f​e​.
 	 */
-	JOIN_US_LEARN_FROM_OTHERS_DESCRIPTION: string
+	CONTRIBUTE_LEARN_FROM_OTHERS_DESCRIPTION: string
 	/**
 	 * T​h​i​s​ ​l​o​g​ ​w​a​s​ ​c​a​l​l​e​d​ ​f​r​o​m​ ​'​{​f​i​l​e​N​a​m​e​}​'
 	 * @param {string} fileName
@@ -105,7 +125,7 @@ type RootTranslation = {
 	 */
 	CONTACT_FORM_SUBMIT: string
 	/**
-	 * N​a​m​e
+	 * Y​o​u​r​ ​n​a​m​e
 	 */
 	CONTACT_FORM_NAME: string
 	/**
@@ -166,6 +186,10 @@ export type TranslationFunctions = {
 	 */
 	BUTTON_AUDIT_NOW: () => LocalizedString
 	/**
+	 * Audit
+	 */
+	NAV_AUDIT: () => LocalizedString
+	/**
 	 * About
 	 */
 	NAV_ABOUT: () => LocalizedString
@@ -174,13 +198,21 @@ export type TranslationFunctions = {
 	 */
 	NAV_CONTACT: () => LocalizedString
 	/**
-	 * Sources
+	 * Resources
 	 */
 	NAV_RESOURCES: () => LocalizedString
 	/**
 	 * Join us
 	 */
 	NAV_JOIN_US: () => LocalizedString
+	/**
+	 * Contribute
+	 */
+	NAV_CONTRIBUTE: () => LocalizedString
+	/**
+	 * Community
+	 */
+	NAV_COMMUNITY: () => LocalizedString
 	/**
 	 * About Us
 	 */
@@ -199,37 +231,45 @@ export type TranslationFunctions = {
 	 */
 	ABOUT_CONTENT_P2: () => LocalizedString
 	/**
-	 * Join Us
+	 * The Community
 	 */
-	JOIN_US_TITLE: () => LocalizedString
+	COMMUNITY_TITLE: () => LocalizedString
+	/**
+	 * We want to build this project for you, with you. Everything in life is easier when you can cooperate with same minded people. Currently the main platform we use to stay in touch is Discord. Come hang out, share your problems, your progress or anything you want. Meet new friends or just make someone's day a little brighter.
+	 */
+	COMMUNITY_CONTENT: () => LocalizedString
+	/**
+	 * Contribution
+	 */
+	CONTRIBUTE_TITLE: () => LocalizedString
 	/**
 	 * Join our community and be a part of something meaningful. Help create something that benefits others and makes a positive impact on their lives. Contribute to a meaningful project. You can help others by providing valuable insights and support through our platform. Improve your life quality. You can improve your own life by engaging in a hobby or activity that enhances your personal growth and meet new people with similar interests. Learn from others. You can learn from others by receiving help and guidance on various aspects of life.
 	 */
-	JOIN_US_CONTENT: () => LocalizedString
+	CONTRIBUTE_CONTENT: () => LocalizedString
 	/**
 	 * Contribute to meaningful project
 	 */
-	JOIN_US_CONTRIBUTE: () => LocalizedString
+	CONTRIBUTE_CONTRIBUTE: () => LocalizedString
 	/**
 	 * You can help others by providing valuable insights and support through our platform.
 	 */
-	JOIN_US_CONTRIBUTE_DESCRIPTION: () => LocalizedString
+	CONTRIBUTE_CONTRIBUTE_DESCRIPTION: () => LocalizedString
 	/**
 	 * Improve your life quality
 	 */
-	JOIN_US_IMPROVE_LIFE: () => LocalizedString
+	CONTRIBUTE_IMPROVE_LIFE: () => LocalizedString
 	/**
 	 * You can improve your own life by engaging in a hobby or activity that enhances your personal growth and meet new people with similar interests.
 	 */
-	JOIN_US_IMPROVE_LIFE_DESCRIPTION: () => LocalizedString
+	CONTRIBUTE_IMPROVE_LIFE_DESCRIPTION: () => LocalizedString
 	/**
 	 * Learn from others
 	 */
-	JOIN_US_LEARN_FROM_OTHERS: () => LocalizedString
+	CONTRIBUTE_LEARN_FROM_OTHERS: () => LocalizedString
 	/**
 	 * You can learn from others by receiving help and guidance on various aspects of life.
 	 */
-	JOIN_US_LEARN_FROM_OTHERS_DESCRIPTION: () => LocalizedString
+	CONTRIBUTE_LEARN_FROM_OTHERS_DESCRIPTION: () => LocalizedString
 	/**
 	 * This log was called from '{fileName}'
 	 */
@@ -243,7 +283,7 @@ export type TranslationFunctions = {
 	 */
 	CONTACT_FORM_SUBMIT: () => LocalizedString
 	/**
-	 * Name
+	 * Your name
 	 */
 	CONTACT_FORM_NAME: () => LocalizedString
 	/**

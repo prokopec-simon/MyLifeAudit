@@ -4,26 +4,28 @@
 	import { LL } from '$i18n/i18n-svelte';
 </script>
 
-<div class="mx-auto mt-10 flex w-3/5 flex-col items-center self-center">
+<div
+	class="mx-auto mt-10 flex w-3/5 flex-col items-center self-center text-text_primary"
+>
 	<div class="text-center">
-		<h3 class="mb-2 text-2xl font-bold">{$LL.CONTACT_FORM_TITLE()}</h3>
+		<!-- <h3 class="mb-2 text-2xl font-bold">{$LL.CONTACT_FORM_TITLE()}</h3> -->
 		<div class="flex flex-row">
 			<IcRoundDiscord class="mr-2 h-8 w-8" />
 			<IcRoundMarkEmailRead class="h-8 w-8" />
 		</div>
 	</div>
 	<div class="mt-6 w-full">
-		<form class="rounded bg-white px-8 py-6 shadow-md">
-			<label for="name" class="mb-2 block font-medium text-gray-700">
+		<form class="rounded bg-primary px-8 py-6 shadow-md">
+			<label for="name" class="mb-2 block font-medium">
 				<span>{$LL.CONTACT_FORM_NAME()}</span>
 			</label>
 			<input
 				name="name"
 				aria-label="name"
 				required
-				class="mb-4 w-full rounded border border-gray-300 px-3 py-2 focus:border-primary focus:outline-none"
+				class="mb-4 w-full rounded border px-3 py-2 focus:border-primary focus:outline-none"
 			/>
-			<label for="email" class="mb-2 block font-medium text-gray-700">
+			<label for="email" class="mb-2 block font-medium">
 				<span>{$LL.CONTACT_FORM_EMAIL()}</span>
 			</label>
 			<input
@@ -31,9 +33,9 @@
 				name="email"
 				aria-label="email"
 				required
-				class="mb-4 w-full rounded border border-gray-300 px-3 py-2"
+				class="borderpx-3 mb-4 w-full rounded py-2"
 			/>
-			<label for="message" class="mb-2 block font-medium text-gray-700">
+			<label for="message" class="mb-2 block font-medium">
 				<span>{$LL.CONTACT_FORM_MESSAGE()}</span>
 			</label>
 			<textarea
@@ -46,7 +48,7 @@
 			<input
 				type="submit"
 				value={$LL.CONTACT_FORM_SUBMIT()}
-				class="bg-brand w-full rounded px-4 py-2 font-medium text-white focus:outline-none"
+				class="w-full rounded bg-brand_teal px-4 py-2 font-medium text-white focus:outline-none"
 			/>
 		</form>
 	</div>

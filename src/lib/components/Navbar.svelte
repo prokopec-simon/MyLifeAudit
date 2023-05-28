@@ -13,8 +13,10 @@
 
 	let about = $LL.NAV_ABOUT();
 	let navigationOptions = [
+		{ title: 'NAV_AUDIT', link: '/audit' },
 		{ title: 'NAV_ABOUT', link: '/#about' },
-		{ title: 'NAV_JOIN_US', link: '/join-us' },
+		{ title: 'NAV_COMMUNITY', link: '/#community' },
+		{ title: 'NAV_CONTRIBUTE', link: '/#contribute' },
 		{ title: 'NAV_CONTACT', link: '/contact' },
 		{ title: 'NAV_RESOURCES', link: '/resources' },
 	];
