@@ -45,12 +45,11 @@ const en: BaseTranslation = {
 	DROPDOWN_PROFILE_SIGN_OUT: 'Sign Out',
 	SIGN_IN_TITLE: 'Sign In',
 	DROPDOWN_PROFILE_HISTORY: 'My story',
+	QUESTIONARE_SOCIAL: 'Social',
+	QUESTIONARE_LIFESTYLE: 'Lifestyle',
+	QUESTIONARE_MENTAL: 'Mental',
 };
 
-const test = { a: 1 };
-
-const auditQuestionare: BaseTranslation = {
-	AGE: { question: 'How old are you?', type: test },
-};
+const auditQuestionare: BaseTranslation = {};
 
 export default { ...en, ...auditQuestionare };

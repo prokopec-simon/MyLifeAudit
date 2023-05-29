@@ -160,16 +160,18 @@ type RootTranslation = {
 	 * M​y​ ​s​t​o​r​y
 	 */
 	DROPDOWN_PROFILE_HISTORY: string
-	AGE: {
-		/**
-		 * H​o​w​ ​o​l​d​ ​a​r​e​ ​y​o​u​?
-		 */
-		question: string
-		type: {
-			a: {
-			}
-		}
-	}
+	/**
+	 * S​o​c​i​a​l
+	 */
+	QUESTIONARE_SOCIAL: string
+	/**
+	 * L​i​f​e​s​t​y​l​e
+	 */
+	QUESTIONARE_LIFESTYLE: string
+	/**
+	 * M​e​n​t​a​l
+	 */
+	QUESTIONARE_MENTAL: string
 }
 
 export type TranslationFunctions = {
@@ -318,16 +320,18 @@ export type TranslationFunctions = {
 	 * My story
 	 */
 	DROPDOWN_PROFILE_HISTORY: () => LocalizedString
-	AGE: {
-		/**
-		 * How old are you?
-		 */
-		question: () => LocalizedString
-		type: {
-			a: {
-			}
-		}
-	}
+	/**
+	 * Social
+	 */
+	QUESTIONARE_SOCIAL: () => LocalizedString
+	/**
+	 * Lifestyle
+	 */
+	QUESTIONARE_LIFESTYLE: () => LocalizedString
+	/**
+	 * Mental
+	 */
+	QUESTIONARE_MENTAL: () => LocalizedString
 }
 
 export type Formatters = {}
