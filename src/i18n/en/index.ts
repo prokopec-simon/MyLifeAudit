@@ -48,6 +48,11 @@ const en: BaseTranslation = {
 	QUESTIONARE_SOCIAL: 'Social',
 	QUESTIONARE_LIFESTYLE: 'Lifestyle',
 	QUESTIONARE_MENTAL: 'Mental',
+	AUDIT_SOCIAL_01: 'Got any friends? ^^',
+	AUDIT_SOCIAL_02: 'Do you hang out with your parents? ',
+	AUDIT_SOCIAL_03: 'Lorem impsum!',
+	AUDIT_SOCIAL_04: 'Lorem ipsum?',
+
 };
 
 const auditQuestionare: BaseTranslation = {};

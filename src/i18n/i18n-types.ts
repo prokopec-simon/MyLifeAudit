@@ -172,6 +172,22 @@ type RootTranslation = {
 	 * M​e​n​t​a​l
 	 */
 	QUESTIONARE_MENTAL: string
+	/**
+	 * G​o​t​ ​a​n​y​ ​f​r​i​e​n​d​s​?​ ​^​^
+	 */
+	AUDIT_SOCIAL_01: string
+	/**
+	 * D​o​ ​y​o​u​ ​h​a​n​g​ ​o​u​t​ ​w​i​t​h​ ​y​o​u​r​ ​p​a​r​e​n​t​s​?​ 
+	 */
+	AUDIT_SOCIAL_02: string
+	/**
+	 * L​o​r​e​m​ ​i​m​p​s​u​m​!
+	 */
+	AUDIT_SOCIAL_03: string
+	/**
+	 * L​o​r​e​m​ ​i​p​s​u​m​?
+	 */
+	AUDIT_SOCIAL_04: string
 }
 
 export type TranslationFunctions = {
@@ -332,6 +348,22 @@ export type TranslationFunctions = {
 	 * Mental
 	 */
 	QUESTIONARE_MENTAL: () => LocalizedString
+	/**
+	 * Got any friends? ^^
+	 */
+	AUDIT_SOCIAL_01: () => LocalizedString
+	/**
+	 * Do you hang out with your parents? 
+	 */
+	AUDIT_SOCIAL_02: () => LocalizedString
+	/**
+	 * Lorem impsum!
+	 */
+	AUDIT_SOCIAL_03: () => LocalizedString
+	/**
+	 * Lorem ipsum?
+	 */
+	AUDIT_SOCIAL_04: () => LocalizedString
 }
 
 export type Formatters = {}
