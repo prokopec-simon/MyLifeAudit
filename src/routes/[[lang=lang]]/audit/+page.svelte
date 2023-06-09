@@ -3,6 +3,9 @@
 	import { slide } from 'svelte/transition';
 	import auditQuestionare from '../../../stores/auditStore';
 	import AuditQuestionare from '../../../lib/components/AuditQuestionare.svelte';
+	import Modal from '../../../lib/components/ConfirmModal.svelte';
+
+	let showModal = false;
 </script>
 
 <main transition:slide class="min-h-screen bg-primary">
@@ -34,7 +37,9 @@
 				</div>
 				<button
 					class="mx-auto mt-8 inline-block w-32 rounded bg-brand_brick px-6 py-3 font-bold text-white"
-					>End Audit</button
+					on:click={() => {
+						showModal = true;
+					}}>End Audit</button
 				>
 			</div>
 		{:else}
@@ -55,3 +60,10 @@
 		{/if}
 	</div>
 </main>
+<Modal bind:showModal>
+	<h2 slot="header">
+		{$LL.AUDIT_CLOSE_UNANSWERED_MODAL_TITLE()}
+	</h2>
+
+	<div>{$LL.AUDIT_CLOSE_UNANSWERED_MODAL_WARNING()}</div>
+</Modal>

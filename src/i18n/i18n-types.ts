@@ -188,6 +188,14 @@ type RootTranslation = {
 	 * L​o​r​e​m​ ​i​p​s​u​m​?
 	 */
 	AUDIT_SOCIAL_04: string
+	/**
+	 * L​o​o​k​s​ ​l​i​k​e​ ​y​o​u​ ​h​a​v​e​ ​s​o​m​e​ ​u​n​a​n​s​w​e​r​e​d​ ​q​u​e​s​t​i​o​n​s​.​ ​W​e​ ​h​i​g​h​l​y​ ​r​e​c​o​m​m​e​n​d​ ​a​n​s​w​e​r​i​n​g​ ​e​v​e​r​y​t​h​i​n​g​ ​f​o​r​ ​e​a​s​i​e​r​ ​c​o​m​p​a​r​i​s​o​n​ ​w​i​t​h​ ​o​t​h​e​r​ ​a​u​d​i​t​ ​r​e​s​u​l​t​s​.
+	 */
+	AUDIT_CLOSE_UNANSWERED_MODAL_WARNING: string
+	/**
+	 * 	​	​E​n​d​ ​a​u​d​i​t
+	 */
+	AUDIT_CLOSE_UNANSWERED_MODAL_TITLE: string
 }
 
 export type TranslationFunctions = {
@@ -364,6 +372,14 @@ export type TranslationFunctions = {
 	 * Lorem ipsum?
 	 */
 	AUDIT_SOCIAL_04: () => LocalizedString
+	/**
+	 * Looks like you have some unanswered questions. We highly recommend answering everything for easier comparison with other audit results.
+	 */
+	AUDIT_CLOSE_UNANSWERED_MODAL_WARNING: () => LocalizedString
+	/**
+	 * 		End audit
+	 */
+	AUDIT_CLOSE_UNANSWERED_MODAL_TITLE: () => LocalizedString
 }
 
 export type Formatters = {}

@@ -52,7 +52,9 @@ const en: BaseTranslation = {
 	AUDIT_SOCIAL_02: 'Do you hang out with your parents? ',
 	AUDIT_SOCIAL_03: 'Lorem impsum!',
 	AUDIT_SOCIAL_04: 'Lorem ipsum?',
-
+	AUDIT_CLOSE_UNANSWERED_MODAL_WARNING:
+		'Looks like you have some unanswered questions. We highly recommend answering everything for easier comparison with other audit results.',
+	AUDIT_CLOSE_UNANSWERED_MODAL_TITLE: '		End audit',
 };
 
 const auditQuestionare: BaseTranslation = {};

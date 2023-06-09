@@ -71,7 +71,7 @@
 
 {#if isSidePanelMenuOpen}
 	<div
-		class="menu-transition fixed left-0 top-16 h-full w-32 transform bg-primary p-4 text-text_primary transition duration-500 ease-in-out"
+		class="menu-transition fixed left-0 top-16 h-full w-full transform bg-primary p-4 text-text_primary transition duration-500 ease-in-out"
 		class:translate-x-0={isSidePanelMenuOpen}
 		class:translate-x-full={!isSidePanelMenuOpen}
 	>
