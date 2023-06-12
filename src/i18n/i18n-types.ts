@@ -121,6 +121,34 @@ type RootTranslation = {
 	 */
 	CONTACT_FORM_TITLE: string
 	/**
+	 * .​.​.​o​r​ ​c​o​n​t​a​c​t​ ​u​s​ ​v​i​a
+	 */
+	CONTACT_FORM_FIND_US: string
+	/**
+	 * W​h​e​t​h​e​r​ ​i​t​'​s​ ​j​u​s​t​ ​a​ ​q​u​e​s​t​i​o​n​ ​o​r​ ​t​o​ ​s​a​y​ ​h​e​l​l​o​,​ ​w​e​'​r​e​ ​a​l​w​a​y​s​ ​h​e​r​e​ ​f​o​r​ ​y​o​u​.
+	 */
+	CONTACT_FORM_CONTENT: string
+	/**
+	 * A​n​s​w​e​r​ ​y​o​u​r​ ​q​u​e​s​t​i​o​n​s​ ​a​b​o​u​t​ ​M​y​ ​L​i​f​e​ ​A​u​d​i​t
+	 */
+	CONTACT_FORM_POINTS_0: string
+	/**
+	 * D​i​s​c​u​s​s​ ​i​n​t​e​g​r​a​t​i​o​n​s​ ​w​i​t​h​ ​y​o​u​r​ ​p​r​o​d​u​c​t
+	 */
+	CONTACT_FORM_POINTS_1: string
+	/**
+	 * G​i​v​e​ ​u​s​ ​a​n​y​ ​f​o​r​m​ ​o​f​ ​f​e​e​d​b​a​c​k
+	 */
+	CONTACT_FORM_POINTS_2: string
+	/**
+	 * T​a​l​k​ ​t​o​ ​y​o​u​ ​a​b​o​u​t​ ​c​o​n​t​r​i​b​u​t​i​o​n
+	 */
+	CONTACT_FORM_POINTS_3: string
+	/**
+	 * C​o​n​s​i​d​e​r​ ​y​o​u​r​ ​f​e​a​t​u​r​e​ ​i​d​e​a
+	 */
+	CONTACT_FORM_POINTS_4: string
+	/**
 	 * S​e​n​d
 	 */
 	CONTACT_FORM_SUBMIT: string
@@ -304,6 +332,34 @@ export type TranslationFunctions = {
 	 * Contact Us
 	 */
 	CONTACT_FORM_TITLE: () => LocalizedString
+	/**
+	 * ...or contact us via
+	 */
+	CONTACT_FORM_FIND_US: () => LocalizedString
+	/**
+	 * Whether it's just a question or to say hello, we're always here for you.
+	 */
+	CONTACT_FORM_CONTENT: () => LocalizedString
+	/**
+	 * Answer your questions about My Life Audit
+	 */
+	CONTACT_FORM_POINTS_0: () => LocalizedString
+	/**
+	 * Discuss integrations with your product
+	 */
+	CONTACT_FORM_POINTS_1: () => LocalizedString
+	/**
+	 * Give us any form of feedback
+	 */
+	CONTACT_FORM_POINTS_2: () => LocalizedString
+	/**
+	 * Talk to you about contribution
+	 */
+	CONTACT_FORM_POINTS_3: () => LocalizedString
+	/**
+	 * Consider your feature idea
+	 */
+	CONTACT_FORM_POINTS_4: () => LocalizedString
 	/**
 	 * Send
 	 */

@@ -2,20 +2,56 @@
 	import IcRoundDiscord from '~icons/ic/round-discord';
 	import IcRoundMarkEmailRead from '~icons/ic/round-mark-email-read';
 	import { LL } from '$i18n/i18n-svelte';
+	import MaterialSymbolsCheckCircleOutline from '~icons/material-symbols/check-circle-outline';
+	import { colors } from '../../colorThemes';
 </script>
 
 <div
-	class="mx-auto mt-10 flex w-3/5 flex-col items-center self-center text-text_primary"
+	class="mx-auto mt-10 flex w-4/5 flex-col px-8 pt-16 text-text_primary md:w-4/6 md:flex-row"
 >
-	<div class="text-center">
-		<!-- <h3 class="mb-2 text-2xl font-bold">{$LL.CONTACT_FORM_TITLE()}</h3> -->
-		<div class="flex flex-row">
-			<IcRoundDiscord class="mr-2 h-8 w-8" />
-			<IcRoundMarkEmailRead class="h-8 w-8" />
+	<div class="w-full md:w-1/2">
+		<h2 class="text-4xl font-semibold">{$LL.CONTACT_FORM_TITLE()}</h2>
+		<p class="text-xl">{$LL.CONTACT_FORM_CONTENT()}</p>
+		<ul class="mt-4 py-1 text-lg">
+			<li class="flex items-center">
+				<div class="mr-2">
+					<MaterialSymbolsCheckCircleOutline color={colors.light.brand_teal} />
+				</div>
+				<div>{$LL.CONTACT_FORM_POINTS_0()}</div>
+			</li>
+			<li class="flex items-center">
+				<div class="mr-2">
+					<MaterialSymbolsCheckCircleOutline color={colors.light.brand_teal} />
+				</div>
+				<div>{$LL.CONTACT_FORM_POINTS_1()}</div>
+			</li>
+			<li class="flex items-center">
+				<div class="mr-2">
+					<MaterialSymbolsCheckCircleOutline color={colors.light.brand_teal} />
+				</div>
+				<div>{$LL.CONTACT_FORM_POINTS_2()}</div>
+			</li>
+			<li class="flex items-center">
+				<div class="mr-2">
+					<MaterialSymbolsCheckCircleOutline color={colors.light.brand_teal} />
+				</div>
+				<div>{$LL.CONTACT_FORM_POINTS_3()}</div>
+			</li>
+			<li class="flex items-center">
+				<div class="mr-2">
+					<MaterialSymbolsCheckCircleOutline color={colors.light.brand_teal} />
+				</div>
+				<div>{$LL.CONTACT_FORM_POINTS_4()}</div>
+			</li>
+		</ul>
+		<h3 class="my-2 text-lg italic">{$LL.CONTACT_FORM_FIND_US()}</h3>
+		<div class="flex flex-row justify-start">
+			<button> <IcRoundDiscord class="mr-2 h-12 w-12" /> </button>
+			<button> <IcRoundMarkEmailRead class="h-12 w-12" /> </button>
 		</div>
 	</div>
-	<div class="mt-6 w-full">
-		<form class="rounded bg-primary px-8 py-6 shadow-md">
+	<div class="w-full md:w-1/2">
+		<form class="rounded bg-primary_off px-8 py-6 shadow-md">
 			<label for="name" class="mb-2 block font-medium">
 				<span>{$LL.CONTACT_FORM_NAME()}</span>
 			</label>
