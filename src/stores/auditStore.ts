@@ -1,12 +1,12 @@
 import { writable } from 'svelte/store';
 
-const auditQuestionare = {
+const auditQuestions = {
 	currentLocation: 'overview',
 	currentQuestionIndex: 0,
 	categories: [
 		{
 			code: 'social',
-			name: 'QUESTIONARE_SOCIAL',
+			name: 'AUDIT_CATEGORY_SOCIAL',
 			color: '#FF0000',
 			questions: [
 				{
@@ -37,7 +37,7 @@ const auditQuestionare = {
 		},
 		{
 			code: 'digital',
-			name: 'QUESTIONARE_DIGITAL',
+			name: 'AUDIT_CATEGORY_DIGITAL',
 			color: '#FFFF00',
 			questions: [
 				{
@@ -52,10 +52,10 @@ const auditQuestionare = {
 		{
 			code: 'lifestyle',
 			color: '#0000FF',
-			name: 'QUESTIONARE_LIFESTYLE',
+			name: 'AUDIT_CATEGORY_LIFESTYLE',
 			questions: [
 				{
-					question: 'Sleep quality?',
+					question: 'AUDIT_LIFESTYLE_01',
 					type: 'range',
 					isAnswered: false,
 					pickedAnswer: null,
@@ -65,10 +65,10 @@ const auditQuestionare = {
 		{
 			code: 'mental',
 			color: '#00FF00',
-			name: 'QUESTIONARE_MENTAL',
+			name: 'AUDIT_CATEGORY_MENTAL',
 			questions: [
 				{
-					question: 'Sleep quality?',
+					question: 'AUDIT_MENTAL_01',
 					type: 'range',
 					isAnswered: false,
 					pickedAnswer: null,
@@ -78,7 +78,7 @@ const auditQuestionare = {
 	],
 };
 
-const { subscribe, set, update } = writable(auditQuestionare);
+const { subscribe, set, update } = writable(auditQuestions);
 export default {
 	subscribe,
 	set,

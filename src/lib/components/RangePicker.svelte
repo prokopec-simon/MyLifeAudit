@@ -48,10 +48,9 @@
 			>
 				<div class="relative h-full w-11/12">
 					<div
-						class="absolute inset-0 m-1 rounded-full bg-white opacity-0 hover:opacity-100 {selectedValue ===
-						i + 1
-							? 'opacity-100'
-							: ''} {colors[i]}"
+						class="absolute inset-0 m-1 rounded-full opacity-0 hover:opacity-100 {hoverStyles[
+							i
+						]} {selectedValue === i + 1 ? 'opacity-100' : ''} {colors[i]}"
 					/>
 				</div>
 			</button>

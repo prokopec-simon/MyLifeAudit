@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { LL } from '$i18n/i18n-svelte';
 	import { slide } from 'svelte/transition';
-	import auditQuestionare from '../../../stores/auditStore';
-	import AuditQuestionare from '../../../lib/components/AuditQuestionare.svelte';
+	import auditStore from '../../../stores/auditStore';
+	import AuditForm from '../../../lib/components/AuditForm.svelte';
 	import Modal from '../../../lib/components/ConfirmModal.svelte';
 
 	let showModal = false;
@@ -10,15 +10,15 @@
 
 <main transition:slide class="min-h-screen bg-primary">
 	<div class="mt-16 text-text_primary">
-		{#if $auditQuestionare.currentLocation == 'overview'}
+		{#if $auditStore.currentLocation == 'overview'}
 			<div class="flex flex-col">
 				<div class="flex flex-wrap items-center justify-center md:pt-28">
-					{#each $auditQuestionare.categories as category}
+					{#each $auditStore.categories as category}
 						<button
 							class="mb-2 flex h-40 w-40 flex-col place-content-center items-center rounded-md border-2 bg-primary_off md:mb-0 md:mr-2"
 							style="border-color:{category.color}"
 							on:click={() => {
-								auditQuestionare.update((value) => {
+								auditStore.update((value) => {
 									return {
 										...value,
 										currentLocation: category.code,
@@ -44,12 +44,12 @@
 			</div>
 		{:else}
 			<div>
-				<AuditQuestionare />
+				<AuditForm />
 			</div>
 			<button
 				class="mt-8 inline-block rounded bg-brand_teal px-4 py-1 text-sm text-white"
 				on:click={() => {
-					auditQuestionare.update((value) => {
+					auditStore.update((value) => {
 						return {
 							...value,
 							currentLocation: 'overview',

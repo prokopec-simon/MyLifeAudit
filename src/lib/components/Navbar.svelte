@@ -52,7 +52,7 @@
 			<div class="hidden md:flex md:items-center">
 				{#each navigationOptions as option (option.title)}
 					<button
-						class="mr-4 hover:text-gray-400"
+						class="mr-4 hover:text-brand_teal"
 						on:click={() => {
 							goto($locale + option.link);
 						}}>{$LL[option.title]()}</button
@@ -79,7 +79,7 @@
 			{#each navigationOptions as option (option.title)}
 				<li>
 					<button
-						class="hover:text-gray-400"
+						class="hover:text-brand_teal"
 						on:click={() => {
 							goto($locale + '/' + option.link);
 						}}>{$LL[option.title]()}</button

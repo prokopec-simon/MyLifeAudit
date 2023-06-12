@@ -163,15 +163,15 @@ type RootTranslation = {
 	/**
 	 * S​o​c​i​a​l
 	 */
-	QUESTIONARE_SOCIAL: string
+	AUDIT_CATEGORY_SOCIAL: string
 	/**
 	 * L​i​f​e​s​t​y​l​e
 	 */
-	QUESTIONARE_LIFESTYLE: string
+	AUDIT_CATEGORY_LIFESTYLE: string
 	/**
 	 * M​e​n​t​a​l
 	 */
-	QUESTIONARE_MENTAL: string
+	AUDIT_CATEGORY_MENTAL: string
 	/**
 	 * G​o​t​ ​a​n​y​ ​f​r​i​e​n​d​s​?​ ​^​^
 	 */
@@ -347,15 +347,15 @@ export type TranslationFunctions = {
 	/**
 	 * Social
 	 */
-	QUESTIONARE_SOCIAL: () => LocalizedString
+	AUDIT_CATEGORY_SOCIAL: () => LocalizedString
 	/**
 	 * Lifestyle
 	 */
-	QUESTIONARE_LIFESTYLE: () => LocalizedString
+	AUDIT_CATEGORY_LIFESTYLE: () => LocalizedString
 	/**
 	 * Mental
 	 */
-	QUESTIONARE_MENTAL: () => LocalizedString
+	AUDIT_CATEGORY_MENTAL: () => LocalizedString
 	/**
 	 * Got any friends? ^^
 	 */
