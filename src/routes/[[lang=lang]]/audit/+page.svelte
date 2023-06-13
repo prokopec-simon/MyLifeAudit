@@ -68,6 +68,8 @@
 	<h2 slot="header">
 		{$LL.AUDIT_CLOSE_UNANSWERED_MODAL_TITLE()}
 	</h2>
-
-	<div>{$LL.AUDIT_CLOSE_UNANSWERED_MODAL_WARNING()}</div>
+	<div slot="body">{$LL.AUDIT_CLOSE_UNANSWERED_MODAL_WARNING()}</div>
+	<div slot="footer">
+		<button>End anyway</button><button>Finish Auditing</button>
+	</div>
 </Modal>

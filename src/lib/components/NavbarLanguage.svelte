@@ -15,7 +15,6 @@
 	const icons = {
 		cz: CircleFlagsCz,
 		us: CircleFlagsUs,
-		// Add more icons here
 	};
 	function getIconComponent(iconName: string) {
 		return icons[iconName] || null;

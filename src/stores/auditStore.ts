@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
+import type { AuditForm } from '../models/AuditForm';
 
-const auditQuestions = {
+const auditQuestions: AuditForm = {
 	currentLocation: 'overview',
 	currentQuestionIndex: 0,
 	categories: [

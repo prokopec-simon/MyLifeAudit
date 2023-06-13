@@ -7,6 +7,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <dialog
+	class="rounded border-none bg-primary p-0 text-text_primary"
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
@@ -14,20 +15,13 @@
 	<div on:click|stopPropagation>
 		<slot name="header" />
 		<hr />
-		<slot />
+		<slot name="body" />
 		<hr />
-		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
+		<slot name="footer" />
 	</div>
 </dialog>
 
 <style>
-	dialog {
-		max-width: 32em;
-		border-radius: 0.2em;
-		border: none;
-		padding: 0;
-	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
 	}
@@ -55,8 +49,5 @@
 		to {
 			opacity: 1;
 		}
-	}
-	button {
-		display: block;
 	}
 </style>

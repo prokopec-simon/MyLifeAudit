@@ -1,17 +1,25 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { onDestroy } from 'svelte';
-	import auditQuestionare from '../../stores/auditStore';
+	import auditFormStore from '../../stores/auditStore';
 	import { LL } from '$i18n/i18n-svelte';
 	import RangePicker from './RangePicker.svelte';
+	import type { AuditCategory } from '../../models/AuditForm';
 
-	let currentCategory;
+	let currentCategory: AuditCategory;
 
-	const scrollToCursor = () => {
-		console.log('huh');
+	const scrollToNextQuestion = () => {
+		const rangePickers = document.querySelectorAll('.range-picker');
+		const nextRangePicker = rangePickers[rangePickers.length - 1];
+
+		if (nextRangePicker) {
+			const rect = nextRangePicker.getBoundingClientRect();
+			const { top } = rect;
+			window.scrollBy({ top: top, behavior: 'smooth' });
+		}
 	};
 
-	const unsubscribe = auditQuestionare.subscribe((value) => {
+	const unsubscribe = auditFormStore.subscribe((value) => {
 		const currentLocation = value.currentLocation;
 		currentCategory = value.categories.find(
 			(category) => category.code === currentLocation
@@ -20,7 +28,7 @@
 
 	onMount(() => {
 		const handleAnswerSelected = () => {
-			scrollToCursor();
+			scrollToNextQuestion();
 		};
 
 		window.addEventListener('answerSelected', handleAnswerSelected);
@@ -44,7 +52,8 @@
 			class="mb-4 flex h-48 w-4/5 flex-col items-center justify-center rounded-lg bg-primary_off p-4 shadow md:w-3/5"
 		>
 			<div class="mb-4 md:text-xl">{$LL[question.question]()}</div>
-			<RangePicker selectedValue="4" />
+			<RangePicker selectedValue="4" wtfSvelteKit="range-picker" />
 		</div>
 	{/each}
+	<div class="min-h-screen">Audit long Footer here ^^</div>
 </div>

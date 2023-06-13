@@ -49,11 +49,12 @@
 			</button>
 			<div class="hidden md:flex md:items-center">
 				{#each navigationOptions as option (option.title)}
-					<a href={`/${$locale}${option.link}`}
-						><button class="text-xl hover:text-brand_teal"
-							>{$LL[option.title]()}</button
-						></a
+					<a
+						class="mr-2 text-xl hover:text-brand_teal"
+						href={`/${$locale}${option.link}`}
 					>
+						{$LL[option.title]()}
+					</a>
 				{/each}
 			</div>
 		</div>

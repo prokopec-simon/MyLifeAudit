@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let selectedValue;
+	export let wtfSvelteKit = '';
 
 	const handleDotClick = (value) => {
 		selectedValue = value;
@@ -40,15 +41,15 @@
 	>
 		Agree
 	</div>
-	<div class="col-span-4 md:col-span-2">
+	<div class="col-span-4 md:col-span-2 {wtfSvelteKit}">
 		{#each Array(7) as _, i}
 			<button
-				class="m-1 h-6 w-6 cursor-pointer rounded-lg border border-solid border-brand_brick md:h-8 md:w-8"
+				class="m-1 h-6 w-6 cursor-pointer rounded-full border border-solid border-brand_brick hover:opacity-100 md:h-8 md:w-8"
 				on:click={() => handleDotClick(i + 1)}
 			>
 				<div class="relative h-full w-11/12">
 					<div
-						class="absolute inset-0 m-1 rounded-full opacity-0 hover:opacity-100 {hoverStyles[
+						class="absolute inset-0 m-1 rounded-full opacity-0 {hoverStyles[
 							i
 						]} {selectedValue === i + 1 ? 'opacity-100' : ''} {colors[i]}"
 					/>
