@@ -3,7 +3,7 @@
 	import Footer from '../../lib/components/Footer.svelte';
 	import { goto } from '$app/navigation';
 	import { locale } from '../../i18n/i18n-svelte';
-	const svgPath = '/about_top_bg.svg';
+	// const svgPath = '/about_top_bg.svg';
 
 	import { slide } from 'svelte/transition';
 </script>
@@ -26,7 +26,7 @@
 		>
 	</div>
 </main>
-<div class="w-full bg-primary">
+<!-- <div class="w-full bg-primary">
 	<svg
 		version="1.1"
 		id="Layer_1"
@@ -45,14 +45,16 @@
 	c89.754-12.672,175.621-24.796,276.621-24.796C1782.237,9.066,1849.438,17.506,1920,30.793z"
 		/>
 	</svg>
-</div>
+</div> -->
 <section
 	class="mt-0 flex scroll-mt-24 bg-primary_off text-text_primary
 	"
 	id="about"
 >
-	<div class="container mx-auto flex w-4/5 items-center justify-center px-8">
-		<div class="w-100 pb-12 md:-mt-8 md:pb-6">
+	<div
+		class="container mx-auto flex w-4/5 items-center justify-center px-8 py-12"
+	>
+		<div class="w-100 pb-12 md:pb-6">
 			<h2 class="mb-4 text-center text-3xl font-semibold">
 				{$LL.ABOUT_TITLE()}
 			</h2>
@@ -66,7 +68,7 @@
 		</div>
 	</div>
 </section>
-<div class="w-full bg-primary">
+<!-- <div class="w-full bg-primary">
 	<svg
 		version="1.1"
 		id="Layer_1"
@@ -82,8 +84,11 @@
 	C271.87,56.38,174.85,34.71,0,25.44V-41H1920z"
 		/>
 	</svg>
-</div>
-<section class="flex scroll-mt-24 flex-col bg-primary" id="community">
+</div> -->
+<section
+	class="flex scroll-mt-24 flex-col bg-primary text-text_primary md:pb-40"
+	id="community"
+>
 	<div
 		class="container mx-auto flex w-4/5 flex-col items-center justify-center md:flex-row"
 	>
@@ -110,10 +115,10 @@
 			</div>
 		</div>
 		<div
-			class="container mx-auto flex flex-col items-center justify-center md:flex-row md:flex-wrap"
+			class="container mx-auto flex flex-col items-center justify-center text-text_primary md:flex-row md:flex-wrap"
 		>
 			<div class="w-full p-1 md:w-1/2 md:p-8">
-				<div class="rounded-lg bg-white p-6 shadow-lg">
+				<div class="h-40 rounded-lg bg-primary_off p-6 shadow-lg">
 					<span class="pb-4 text-xl font-bold"
 						>{$LL.CONTRIBUTE_CONTRIBUTE()}</span
 					>
@@ -123,7 +128,7 @@
 				</div>
 			</div>
 			<div class="w-full p-1 md:w-1/2 md:p-8">
-				<div class="rounded-lg bg-white p-6 shadow-lg">
+				<div class="h-40 rounded-lg bg-primary_off p-6 shadow-lg">
 					<p class="text-center text-xl">
 						<span class="font-bold">{$LL.CONTRIBUTE_IMPROVE_LIFE()}</span>
 						{$LL.CONTRIBUTE_IMPROVE_LIFE_DESCRIPTION()}
@@ -131,7 +136,7 @@
 				</div>
 			</div>
 			<div class="w-full p-1 md:w-1/2 md:p-8">
-				<div class="rounded-lg bg-white p-6 shadow-lg">
+				<div class="h-40 rounded-lg bg-primary_off p-6 shadow-lg">
 					<p class="text-center text-xl">
 						<span class="font-bold">{$LL.CONTRIBUTE_LEARN_FROM_OTHERS()}</span>
 						{$LL.CONTRIBUTE_LEARN_FROM_OTHERS_DESCRIPTION()}
@@ -139,7 +144,7 @@
 				</div>
 			</div>
 			<div class="w-full p-1 md:w-1/2 md:p-8">
-				<div class="rounded-lg bg-white p-6 shadow-lg">
+				<div class="h-40 rounded-lg bg-primary_off p-6 shadow-lg">
 					<p class="text-center text-xl">
 						<span class="font-bold">{$LL.CONTRIBUTE_LEARN_FROM_OTHERS()}</span>
 						{$LL.CONTRIBUTE_LEARN_FROM_OTHERS_DESCRIPTION()}
@@ -150,9 +155,9 @@
 	</div>
 </section>
 <Footer />
-
+<!-- 
 <style>
 	.primarybg {
 		fill: hsl(var(--twc-primary_off));
 	}
-</style>
+</style> -->

@@ -9,6 +9,21 @@
 </script>
 
 <main transition:slide class="min-h-screen bg-primary">
+	{#if $auditStore.currentLocation != 'overview'}
+		<button
+			class="absolute top-1/2 h-20 w-20 -translate-y-1/2 transform rounded-full bg-brand_teal px-4 py-1 text-sm text-white"
+			on:click={() => {
+				auditStore.update((value) => {
+					return {
+						...value,
+						currentLocation: 'overview',
+					};
+				});
+			}}
+		>
+			Back
+		</button>
+	{/if}
 	<div class="mt-16 text-text_primary">
 		{#if $auditStore.currentLocation == 'overview'}
 			<div class="flex flex-col">
@@ -46,17 +61,6 @@
 			<div>
 				<AuditForm />
 			</div>
-			<button
-				class="mt-8 inline-block rounded bg-brand_teal px-4 py-1 text-sm text-white"
-				on:click={() => {
-					auditStore.update((value) => {
-						return {
-							...value,
-							currentLocation: 'overview',
-						};
-					});
-				}}>Back to topics</button
-			>
 		{/if}
 	</div>
 </main>

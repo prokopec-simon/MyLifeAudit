@@ -33,20 +33,18 @@
 				<span
 					class="mb-1 block h-1 w-6 transform bg-text_primary transition duration-500 ease-in-out"
 					class:rotate-45={isSidePanelMenuOpen}
-					class:-translate-y-1.5={isSidePanelMenuOpen}
 					class:rotate-0={!isSidePanelMenuOpen}
-					class:translate-y-0={!isSidePanelMenuOpen}
+					class:translate-y-2={isSidePanelMenuOpen}
 				/>
 				<span
 					class="mb-1 block h-1 w-6 bg-text_primary opacity-0 transition duration-500 ease-in-out"
-					class:opacity-100={isSidePanelMenuOpen}
+					class:opacity-100={!isSidePanelMenuOpen}
 				/>
 				<span
 					class="mb-0 block h-1 w-6 transform bg-text_primary transition duration-500 ease-in-out"
 					class:-rotate-45={isSidePanelMenuOpen}
-					class:translate-y-1.5={isSidePanelMenuOpen}
 					class:rotate-0={!isSidePanelMenuOpen}
-					class:-translate-y-0={!isSidePanelMenuOpen}
+					class:-translate-y-2={isSidePanelMenuOpen}
 				/>
 			</button>
 			<div class="hidden md:flex md:items-center">
@@ -79,7 +77,7 @@
 			{#each navigationOptions as option (option.title)}
 				<li>
 					<button
-						class="hover:text-brand_teal"
+						class="text-xl hover:text-brand_teal"
 						on:click={() => {
 							goto($locale + '/' + option.link);
 						}}>{$LL[option.title]()}</button

@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="mx-auto mt-10 flex w-4/5 flex-col px-8 pt-16 text-text_primary md:w-4/6 md:flex-row"
+	class="mx-auto flex w-full flex-col px-8 pt-4 text-text_primary md:w-4/6 md:flex-row md:pt-16"
 >
 	<div class="w-full md:w-1/2">
 		<h2 class="text-4xl font-semibold">{$LL.CONTACT_FORM_TITLE()}</h2>
@@ -59,7 +59,7 @@
 				name="name"
 				aria-label="name"
 				required
-				class="mb-4 w-full rounded border px-3 py-2 focus:border-primary focus:outline-none"
+				class="mb-4 w-full rounded border border-primary bg-primary px-3 py-2 focus:border-brand_teal focus:outline-none"
 			/>
 			<label for="email" class="mb-2 block font-medium">
 				<span>{$LL.CONTACT_FORM_EMAIL()}</span>
@@ -69,7 +69,7 @@
 				name="email"
 				aria-label="email"
 				required
-				class="borderpx-3 mb-4 w-full rounded py-2"
+				class="mb-4 w-full rounded border border-primary bg-primary px-3 py-2 focus:border-brand_teal focus:outline-none"
 			/>
 			<label for="message" class="mb-2 block font-medium">
 				<span>{$LL.CONTACT_FORM_MESSAGE()}</span>
@@ -79,12 +79,12 @@
 				aria-label="name"
 				required
 				rows="6"
-				class="mb-4 w-full resize-none rounded border border-gray-300 px-3 py-2"
+				class="mb-4 w-full resize-none rounded border border-primary bg-primary px-3 py-2 focus:border-brand_teal focus:outline-none"
 			/>
 			<input
 				type="submit"
 				value={$LL.CONTACT_FORM_SUBMIT()}
-				class="w-full rounded bg-brand_teal px-4 py-2 font-medium text-white focus:outline-none"
+				class="w-full rounded bg-brand_teal px-4 py-2 font-medium text-text_primary focus:outline-none"
 			/>
 		</form>
 	</div>

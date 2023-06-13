@@ -165,6 +165,18 @@ type RootTranslation = {
 	 */
 	CONTACT_FORM_MESSAGE: string
 	/**
+	 * L​e​g​a​l
+	 */
+	FOOTER_LEGAL: string
+	/**
+	 * E​x​p​l​o​r​e
+	 */
+	FOOTER_EXPLORE: string
+	/**
+	 * R​e​s​o​u​r​c​e​s
+	 */
+	FOOTER_EXPLORE_RESOURCES: string
+	/**
 	 * T​e​r​m​s​ ​o​f​ ​S​e​r​v​i​c​e
 	 */
 	FOOTER_TOS: string
@@ -173,9 +185,13 @@ type RootTranslation = {
 	 */
 	FOOTER_PRIVACY: string
 	/**
+	 * C​o​m​p​a​n​y
+	 */
+	FOOTER_COMPANY: string
+	/**
 	 * C​o​n​t​a​c​t​ ​U​s
 	 */
-	FOOTER_CONTACT: string
+	FOOTER_COMPANY_CONTACT: string
 	/**
 	 * S​i​g​n​ ​O​u​t
 	 */
@@ -377,6 +393,18 @@ export type TranslationFunctions = {
 	 */
 	CONTACT_FORM_MESSAGE: () => LocalizedString
 	/**
+	 * Legal
+	 */
+	FOOTER_LEGAL: () => LocalizedString
+	/**
+	 * Explore
+	 */
+	FOOTER_EXPLORE: () => LocalizedString
+	/**
+	 * Resources
+	 */
+	FOOTER_EXPLORE_RESOURCES: () => LocalizedString
+	/**
 	 * Terms of Service
 	 */
 	FOOTER_TOS: () => LocalizedString
@@ -385,9 +413,13 @@ export type TranslationFunctions = {
 	 */
 	FOOTER_PRIVACY: () => LocalizedString
 	/**
+	 * Company
+	 */
+	FOOTER_COMPANY: () => LocalizedString
+	/**
 	 * Contact Us
 	 */
-	FOOTER_CONTACT: () => LocalizedString
+	FOOTER_COMPANY_CONTACT: () => LocalizedString
 	/**
 	 * Sign Out
 	 */
