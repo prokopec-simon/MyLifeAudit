@@ -14,9 +14,9 @@
 	let about = $LL.NAV_ABOUT();
 	let navigationOptions = [
 		{ title: 'NAV_AUDIT', link: '/audit' },
-		{ title: 'NAV_ABOUT', link: '/#about' },
-		{ title: 'NAV_COMMUNITY', link: '/#community' },
-		{ title: 'NAV_CONTRIBUTE', link: '/#contribute' },
+		{ title: 'NAV_ABOUT', link: '#about' },
+		{ title: 'NAV_COMMUNITY', link: '#community' },
+		{ title: 'NAV_CONTRIBUTE', link: '#contribute' },
 		{ title: 'NAV_CONTACT', link: '/contact' },
 		{ title: 'NAV_RESOURCES', link: '/resources' },
 	];
@@ -49,11 +49,10 @@
 			</button>
 			<div class="hidden md:flex md:items-center">
 				{#each navigationOptions as option (option.title)}
-					<button
-						class="mr-4 hover:text-brand_teal"
-						on:click={() => {
-							goto($locale + option.link);
-						}}>{$LL[option.title]()}</button
+					<a href={`/${$locale}${option.link}`}
+						><button class="text-xl hover:text-brand_teal"
+							>{$LL[option.title]()}</button
+						></a
 					>
 				{/each}
 			</div>
@@ -76,11 +75,10 @@
 		<ul class="space-y-2">
 			{#each navigationOptions as option (option.title)}
 				<li>
-					<button
-						class="text-xl hover:text-brand_teal"
-						on:click={() => {
-							goto($locale + '/' + option.link);
-						}}>{$LL[option.title]()}</button
+					<a href={`/${$locale}${option.link}`}
+						><button class="text-xl hover:text-brand_teal"
+							>{$LL[option.title]()}</button
+						></a
 					>
 				</li>
 			{/each}
