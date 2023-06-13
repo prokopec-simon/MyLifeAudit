@@ -76,7 +76,11 @@
 			{#each navigationOptions as option (option.title)}
 				<li>
 					<a href={`/${$locale}${option.link}`}
-						><button class="text-xl hover:text-brand_teal"
+						><button
+							on:click={() => {
+								toggleSidePanelMenu();
+							}}
+							class="text-xl hover:text-brand_teal"
 							>{$LL[option.title]()}</button
 						></a
 					>
