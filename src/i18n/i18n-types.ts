@@ -19,6 +19,14 @@ type RootTranslation = {
 	 */
 	PAGE_TITLE: string
 	/**
+	 * M​y​ ​L​i​f​e​ ​A​u​d​i​t​ ​-​ ​C​o​n​t​a​c​t
+	 */
+	PAGE_TITLE_CONTACT: string
+	/**
+	 * M​y​ ​L​i​f​e​ ​A​u​d​i​t​ ​-​ ​A​u​d​i​t
+	 */
+	PAGE_TITLE_AUDIT: string
+	/**
 	 * T​a​k​e​ ​b​a​c​k​ ​c​h​a​r​g​e​ ​o​f​ ​y​o​u​r​ ​l​i​f​e​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​f​u​t​u​r​e​ ​y​o​u​ ​d​e​s​i​r​e​.​
 	 */
 	BRAND_CLAIM: string
@@ -247,6 +255,14 @@ export type TranslationFunctions = {
 	 * My Life Audit
 	 */
 	PAGE_TITLE: () => LocalizedString
+	/**
+	 * My Life Audit - Contact
+	 */
+	PAGE_TITLE_CONTACT: () => LocalizedString
+	/**
+	 * My Life Audit - Audit
+	 */
+	PAGE_TITLE_AUDIT: () => LocalizedString
 	/**
 	 * Take back charge of your life and create the future you desire.
 	 */

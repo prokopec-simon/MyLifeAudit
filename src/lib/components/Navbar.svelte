@@ -50,7 +50,7 @@
 			<div class="hidden md:flex md:items-center">
 				{#each navigationOptions as option (option.title)}
 					<a
-						class="mr-2 text-xl hover:text-brand_teal"
+						class="mr-4 hover:text-brand_teal"
 						href={`/${$locale}${option.link}`}
 					>
 						{$LL[option.title]()}
