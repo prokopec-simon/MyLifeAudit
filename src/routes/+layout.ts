@@ -10,16 +10,10 @@ export const load: LayoutLoad<{
 	session: Session;
 	trpc: TRPCSSRData;
 }> = async (event) => {
-	// load dictionary into memory
 	await loadLocaleAsync(event.data.locale);
 	const trpc = event.data.trpc;
-	// if you need to output a localized string in a `load` function,
-	// you always need to call `setLocale` right before you access the `LL` store
 	setLocale(event.data.locale);
-	// get the translation functions value from the store
-	//console.info($LL.log({ fileName: '+layout.ts' }));
 
-	// pass locale to the "rendering context"
 	return {
 		locale: event.data.locale,
 		trpc: trpc,
