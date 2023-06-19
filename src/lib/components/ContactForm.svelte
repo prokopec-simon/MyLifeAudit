@@ -84,7 +84,7 @@
 			<input
 				type="submit"
 				value={$LL.CONTACT_FORM_SUBMIT()}
-				class="w-full rounded bg-brand_teal px-4 py-2 font-medium text-text_primary focus:outline-none"
+				class="w-full rounded bg-brand_teal px-4 py-2 font-medium text-white focus:outline-none"
 			/>
 		</form>
 	</div>

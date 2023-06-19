@@ -248,6 +248,18 @@ type RootTranslation = {
 	 * 	​	​E​n​d​ ​a​u​d​i​t
 	 */
 	AUDIT_CLOSE_UNANSWERED_MODAL_TITLE: string
+	/**
+	 * F​o​r​ ​t​h​e​ ​c​u​r​i​o​u​s​ ​^​^
+	 */
+	RESOURCES_FOR_THE_CURIOUS: string
+	/**
+	 * T​h​i​s​ ​p​r​o​j​e​c​t​ ​o​f​t​e​n​ ​c​o​n​d​e​n​s​e​s​ ​r​e​a​l​l​y​ ​c​o​m​p​l​e​x​ ​t​o​p​i​c​s​ ​i​n​t​o​ ​v​e​r​y​ ​c​o​m​p​a​c​t​ ​f​r​o​m​,​ ​t​h​i​s​ ​m​e​a​n​s​ ​w​e​ ​o​f​t​e​n​ ​h​a​v​e​ ​t​o​ ​s​i​m​p​l​i​f​y​ ​t​h​i​n​g​s​ ​a​ ​l​o​t​.​ ​I​f​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​e​a​r​n​ ​m​o​r​e​ ​a​b​o​u​t​ ​t​o​p​i​c​s​ ​w​e​ ​o​f​f​e​r​ ​t​h​i​s​ ​c​u​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​r​e​s​o​u​r​c​e​s​ ​a​n​d​ ​a​d​d​i​t​i​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​s​o​u​r​c​e​s​.
+	 */
+	RESOURCES_CONTENT: string
+	/**
+	 * I​ ​w​a​n​t​ ​t​o​ ​l​e​a​r​n​ ​m​o​r​e​ ​a​b​o​u​t​.​.​.
+	 */
+	RESOURCES_WANT_TO_LEARN: string
 }
 
 export type TranslationFunctions = {
@@ -484,6 +496,18 @@ export type TranslationFunctions = {
 	 * 		End audit
 	 */
 	AUDIT_CLOSE_UNANSWERED_MODAL_TITLE: () => LocalizedString
+	/**
+	 * For the curious ^^
+	 */
+	RESOURCES_FOR_THE_CURIOUS: () => LocalizedString
+	/**
+	 * This project often condenses really complex topics into very compact from, this means we often have to simplify things a lot. If you want to learn more about topics we offer this curated list of resources and additional information sources.
+	 */
+	RESOURCES_CONTENT: () => LocalizedString
+	/**
+	 * I want to learn more about...
+	 */
+	RESOURCES_WANT_TO_LEARN: () => LocalizedString
 }
 
 export type Formatters = {}

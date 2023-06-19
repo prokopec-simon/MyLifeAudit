@@ -70,6 +70,10 @@ const en: BaseTranslation = {
 	AUDIT_CLOSE_UNANSWERED_MODAL_WARNING:
 		'Looks like you have some unanswered questions. We highly recommend answering everything for easier comparison with other audit results.',
 	AUDIT_CLOSE_UNANSWERED_MODAL_TITLE: '		End audit',
+	RESOURCES_FOR_THE_CURIOUS: 'For the curious ^^',
+	RESOURCES_CONTENT:
+		'This project often condenses really complex topics into very compact from, this means we often have to simplify things a lot. If you want to learn more about topics we offer this curated list of resources and additional information sources.',
+	RESOURCES_WANT_TO_LEARN: 'I want to learn more about...',
 };
 
 const auditQuestionare: BaseTranslation = {};
