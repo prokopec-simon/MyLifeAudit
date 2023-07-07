@@ -48,7 +48,7 @@
 {:else}
 	<button
 		on:click={() => signIn()}
-		class="button w-24 rounded-md bg-brand_brick px-4 py-2 text-white"
+		class="button w-24 rounded-md bg-brand_brick px-4 py-2 text-white transition duration-150 hover:bg-brand_brick_dark"
 		>{$LL.SIGN_IN_TITLE()}</button
 	>
 {/if}

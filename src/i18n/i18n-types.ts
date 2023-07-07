@@ -35,7 +35,7 @@ type RootTranslation = {
 	 */
 	BUTTON_AUDIT_NOW: string
 	/**
-	 * A​u​d​i​t
+	 * A​u​d​i​t​ ​N​o​w​!
 	 */
 	NAV_AUDIT: string
 	/**
@@ -63,7 +63,7 @@ type RootTranslation = {
 	 */
 	NAV_COMMUNITY: string
 	/**
-	 * A​b​o​u​t​ ​U​s
+	 * A​B​O​U​T
 	 */
 	ABOUT_TITLE: string
 	/**
@@ -80,7 +80,7 @@ type RootTranslation = {
 	 */
 	ABOUT_CONTENT_P2: string
 	/**
-	 * T​h​e​ ​C​o​m​m​u​n​i​t​y
+	 * T​H​E​ ​C​O​M​M​U​N​I​T​Y
 	 */
 	COMMUNITY_TITLE: string
 	/**
@@ -88,7 +88,7 @@ type RootTranslation = {
 	 */
 	COMMUNITY_CONTENT: string
 	/**
-	 * C​o​n​t​r​i​b​u​t​i​o​n
+	 * C​O​N​T​R​I​B​U​T​E
 	 */
 	CONTRIBUTE_TITLE: string
 	/**
@@ -96,15 +96,15 @@ type RootTranslation = {
 	 */
 	CONTRIBUTE_CONTENT: string
 	/**
-	 * C​o​n​t​r​i​b​u​t​e​ ​t​o​ ​m​e​a​n​i​n​g​f​u​l​ ​p​r​o​j​e​c​t
+	 * H​e​l​p​ ​o​t​h​e​r​s
 	 */
 	CONTRIBUTE_CONTRIBUTE: string
 	/**
-	 * Y​o​u​ ​c​a​n​ ​h​e​l​p​ ​o​t​h​e​r​s​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​v​a​l​u​a​b​l​e​ ​i​n​s​i​g​h​t​s​ ​a​n​d​ ​s​u​p​p​o​r​t​ ​t​h​r​o​u​g​h​ ​o​u​r​ ​p​l​a​t​f​o​r​m​.
+	 * Y​o​u​ ​c​a​n​ ​h​e​l​p​ ​o​t​h​e​r​s​ ​b​y​ ​c​r​e​a​t​i​n​g​ ​s​o​m​e​t​h​i​n​g​ ​m​e​a​n​i​n​g​f​u​l​.​ ​T​h​e​r​e​ ​a​r​e​ ​m​a​n​y​ ​p​e​o​p​l​e​ ​w​h​o​ ​c​o​u​l​d​ ​b​e​n​e​f​i​t​ ​f​r​o​m​ ​o​u​r​ ​p​r​o​d​u​c​t​s​,​ ​h​e​l​p​ ​t​h​e​m​.
 	 */
 	CONTRIBUTE_CONTRIBUTE_DESCRIPTION: string
 	/**
-	 * I​m​p​r​o​v​e​ ​y​o​u​r​ ​l​i​f​e​ ​q​u​a​l​i​t​y
+	 * Y​o​u​r​ ​l​i​f​e​s​t​y​l​e
 	 */
 	CONTRIBUTE_IMPROVE_LIFE: string
 	/**
@@ -112,13 +112,21 @@ type RootTranslation = {
 	 */
 	CONTRIBUTE_IMPROVE_LIFE_DESCRIPTION: string
 	/**
-	 * L​e​a​r​n​ ​f​r​o​m​ ​o​t​h​e​r​s
+	 * L​e​a​r​n
 	 */
 	CONTRIBUTE_LEARN_FROM_OTHERS: string
 	/**
 	 * Y​o​u​ ​c​a​n​ ​l​e​a​r​n​ ​f​r​o​m​ ​o​t​h​e​r​s​ ​b​y​ ​r​e​c​e​i​v​i​n​g​ ​h​e​l​p​ ​a​n​d​ ​g​u​i​d​a​n​c​e​ ​o​n​ ​v​a​r​i​o​u​s​ ​a​s​p​e​c​t​s​ ​o​f​ ​l​i​f​e​.
 	 */
 	CONTRIBUTE_LEARN_FROM_OTHERS_DESCRIPTION: string
+	/**
+	 * M​e​e​t
+	 */
+	CONTRIBUTE_MEET_PEOPLE: string
+	/**
+	 * M​e​e​t​ ​n​e​w​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​s​i​m​i​l​a​r​ ​h​o​b​b​i​e​s​ ​a​n​d​ ​i​n​t​e​r​e​s​t​s​.​ ​N​e​t​w​o​r​k​ ​i​n​ ​y​o​u​r​ ​f​i​e​l​d​.​ ​I​t​'​s​ ​t​i​m​e​ ​t​o​ ​m​a​k​e​ ​n​e​w​ ​f​r​i​e​n​d​s​.
+	 */
+	CONTRIBUTE_MEET_PEOPLE_DESCRIPTION: string
 	/**
 	 * T​h​i​s​ ​l​o​g​ ​w​a​s​ ​c​a​l​l​e​d​ ​f​r​o​m​ ​'​{​f​i​l​e​N​a​m​e​}​'
 	 * @param {string} fileName
@@ -225,6 +233,10 @@ type RootTranslation = {
 	 */
 	AUDIT_CATEGORY_MENTAL: string
 	/**
+	 * D​i​g​i​t​a​l
+	 */
+	AUDIT_CATEGORY_DIGITAL: string
+	/**
 	 * G​o​t​ ​a​n​y​ ​f​r​i​e​n​d​s​?​ ​^​^
 	 */
 	AUDIT_SOCIAL_01: string
@@ -284,7 +296,7 @@ export type TranslationFunctions = {
 	 */
 	BUTTON_AUDIT_NOW: () => LocalizedString
 	/**
-	 * Audit
+	 * Audit Now!
 	 */
 	NAV_AUDIT: () => LocalizedString
 	/**
@@ -312,7 +324,7 @@ export type TranslationFunctions = {
 	 */
 	NAV_COMMUNITY: () => LocalizedString
 	/**
-	 * About Us
+	 * ABOUT
 	 */
 	ABOUT_TITLE: () => LocalizedString
 	/**
@@ -329,7 +341,7 @@ export type TranslationFunctions = {
 	 */
 	ABOUT_CONTENT_P2: () => LocalizedString
 	/**
-	 * The Community
+	 * THE COMMUNITY
 	 */
 	COMMUNITY_TITLE: () => LocalizedString
 	/**
@@ -337,7 +349,7 @@ export type TranslationFunctions = {
 	 */
 	COMMUNITY_CONTENT: () => LocalizedString
 	/**
-	 * Contribution
+	 * CONTRIBUTE
 	 */
 	CONTRIBUTE_TITLE: () => LocalizedString
 	/**
@@ -345,15 +357,15 @@ export type TranslationFunctions = {
 	 */
 	CONTRIBUTE_CONTENT: () => LocalizedString
 	/**
-	 * Contribute to meaningful project
+	 * Help others
 	 */
 	CONTRIBUTE_CONTRIBUTE: () => LocalizedString
 	/**
-	 * You can help others by providing valuable insights and support through our platform.
+	 * You can help others by creating something meaningful. There are many people who could benefit from our products, help them.
 	 */
 	CONTRIBUTE_CONTRIBUTE_DESCRIPTION: () => LocalizedString
 	/**
-	 * Improve your life quality
+	 * Your lifestyle
 	 */
 	CONTRIBUTE_IMPROVE_LIFE: () => LocalizedString
 	/**
@@ -361,13 +373,21 @@ export type TranslationFunctions = {
 	 */
 	CONTRIBUTE_IMPROVE_LIFE_DESCRIPTION: () => LocalizedString
 	/**
-	 * Learn from others
+	 * Learn
 	 */
 	CONTRIBUTE_LEARN_FROM_OTHERS: () => LocalizedString
 	/**
 	 * You can learn from others by receiving help and guidance on various aspects of life.
 	 */
 	CONTRIBUTE_LEARN_FROM_OTHERS_DESCRIPTION: () => LocalizedString
+	/**
+	 * Meet
+	 */
+	CONTRIBUTE_MEET_PEOPLE: () => LocalizedString
+	/**
+	 * Meet new people with similar hobbies and interests. Network in your field. It's time to make new friends.
+	 */
+	CONTRIBUTE_MEET_PEOPLE_DESCRIPTION: () => LocalizedString
 	/**
 	 * This log was called from '{fileName}'
 	 */
@@ -472,6 +492,10 @@ export type TranslationFunctions = {
 	 * Mental
 	 */
 	AUDIT_CATEGORY_MENTAL: () => LocalizedString
+	/**
+	 * Digital
+	 */
+	AUDIT_CATEGORY_DIGITAL: () => LocalizedString
 	/**
 	 * Got any friends? ^^
 	 */

@@ -3,7 +3,6 @@
 	import NavbarProfile from './NavbarProfile.svelte';
 	import LL from '../../i18n/i18n-svelte';
 	import NavbarTheme from './NavbarTheme.svelte';
-	import { goto } from '$app/navigation';
 	import { locale } from '../../i18n/i18n-svelte';
 
 	let isSidePanelMenuOpen = false;
@@ -13,18 +12,22 @@
 
 	let about = $LL.NAV_ABOUT();
 	let navigationOptions = [
-		{ title: 'NAV_AUDIT', link: '/audit' },
+		{
+			title: 'NAV_AUDIT',
+			link: '/audit',
+			textColor: 'text-brand_brick ',
+		},
 		{ title: 'NAV_ABOUT', link: '#about' },
 		{ title: 'NAV_COMMUNITY', link: '#community' },
-		{ title: 'NAV_CONTRIBUTE', link: '#contribute' },
+		//{ title: 'NAV_CONTRIBUTE', link: '#contribute' },
 		{ title: 'NAV_CONTACT', link: '/contact' },
-		{ title: 'NAV_RESOURCES', link: '/resources' },
+		//{ title: 'NAV_RESOURCES', link: '/resources' },
 	];
 </script>
 
 <div class="flex flex-col">
 	<nav class="fixed top-0 z-50 flex h-16 w-full bg-primary text-text_primary">
-		<div class="ml-4 flex flex-1 items-center">
+		<div class="ml-4 flex items-center">
 			<button
 				aria-label="toggleSidePanel"
 				class="mr-4 text-2xl font-bold focus:outline-none md:hidden"
@@ -50,7 +53,7 @@
 			<div class="hidden md:flex md:items-center">
 				{#each navigationOptions as option (option.title)}
 					<a
-						class="mr-4 hover:text-brand_teal"
+						class="mx-2 text-xl transition duration-150 hover:text-brand_teal {option.textColor}"
 						href={`/${$locale}${option.link}`}
 					>
 						{$LL[option.title]()}

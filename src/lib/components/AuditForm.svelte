@@ -51,7 +51,9 @@
 		<div
 			class="mb-4 flex h-48 w-4/5 flex-col items-center justify-center rounded-lg bg-primary_off p-4 shadow md:w-3/5"
 		>
-			<div class="mb-4 md:text-xl">{$LL[question.question]()}</div>
+			<div class="mb-8 md:text-xl">
+				{$LL[question.question]()}
+			</div>
 			<RangePicker selectedValue="4" wtfSvelteKit="range-picker" />
 		</div>
 	{/each}

@@ -35,13 +35,13 @@
 	};
 </script>
 
-<div class="grid grid-cols-4 justify-center">
+<div class="grid w-4/5 grid-cols-4 justify-center">
 	<div
 		class="row-start-2 mt-2 text-lg md:col-start-1 md:row-start-1 md:mr-4 md:text-right"
 	>
 		Agree
 	</div>
-	<div class="col-span-4 md:col-span-2 {wtfSvelteKit}">
+	<div class="col-span-4 md:col-span-2 {wtfSvelteKit} flex justify-center">
 		{#each Array(7) as _, i}
 			<button
 				class="m-1 h-6 w-6 cursor-pointer rounded-full border border-solid border-brand_brick hover:opacity-100 md:h-8 md:w-8"

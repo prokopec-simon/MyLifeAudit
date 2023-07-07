@@ -27,10 +27,10 @@
 	<div class="mt-16 text-text_primary">
 		{#if $auditStore.currentLocation == 'overview'}
 			<div class="flex flex-col">
-				<div class="flex flex-wrap items-center justify-center md:pt-28">
+				<div class="flex flex-wrap items-center justify-center pt-12 md:pt-28">
 					{#each $auditStore.categories as category}
 						<button
-							class="mb-2 flex h-40 w-40 flex-col place-content-center items-center rounded-md border-2 bg-primary_off md:mb-0 md:mr-2"
+							class="m-2 mb-2 flex h-32 w-32 flex-col place-content-center items-center rounded-md border-2 bg-primary_off md:mb-0 md:mr-2 md:h-40 md:w-40"
 							style="border-color:{category.color}"
 							on:click={() => {
 								auditStore.update((value) => {
@@ -51,7 +51,7 @@
 					{/each}
 				</div>
 				<button
-					class="mx-auto mt-8 inline-block w-32 rounded bg-brand_brick px-6 py-3 font-bold text-white"
+					class="mx-auto mt-8 inline-block w-32 rounded bg-brand_brick px-6 py-3 text-lg text-white"
 					on:click={() => {
 						showModal = true;
 					}}>End Audit</button

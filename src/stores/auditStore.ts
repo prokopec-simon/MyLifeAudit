@@ -8,7 +8,7 @@ const auditQuestions: AuditForm = {
 		{
 			code: 'social',
 			name: 'AUDIT_CATEGORY_SOCIAL',
-			color: '#FF0000',
+			color: '#E26D5A',
 			questions: [
 				{
 					question: 'AUDIT_SOCIAL_01',
@@ -39,7 +39,7 @@ const auditQuestions: AuditForm = {
 		{
 			code: 'digital',
 			name: 'AUDIT_CATEGORY_DIGITAL',
-			color: '#FFFF00',
+			color: '#3AA89B',
 			questions: [
 				{
 					question: 'AUDIT_DIGITAL_01',
@@ -52,7 +52,7 @@ const auditQuestions: AuditForm = {
 		},
 		{
 			code: 'lifestyle',
-			color: '#0000FF',
+			color: '#E26D5A',
 			name: 'AUDIT_CATEGORY_LIFESTYLE',
 			questions: [
 				{
@@ -65,7 +65,7 @@ const auditQuestions: AuditForm = {
 		},
 		{
 			code: 'mental',
-			color: '#00FF00',
+			color: '#3AA89B',
 			name: 'AUDIT_CATEGORY_MENTAL',
 			questions: [
 				{

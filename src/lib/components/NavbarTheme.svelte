@@ -25,7 +25,7 @@
 
 	function getTheme() {
 		if (typeof document === 'undefined') {
-			return ''; // Return an empty string if document is not defined
+			return '';
 		}
 
 		const themePrefix = 'theme-';
@@ -54,7 +54,10 @@
 </script>
 
 <div>
-	<button on:click={() => changeColorTheme()} class="mr-2 mt-2 text-xl">
+	<button
+		on:click={() => changeColorTheme()}
+		class="mr-2 mt-2 text-xl"
+	>
 		{#if $themeStore === 'theme-light'}
 			<SolarSun2Bold />
 		{:else}
