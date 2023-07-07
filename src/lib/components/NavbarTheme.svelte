@@ -57,6 +57,7 @@
 	<button
 		on:click={() => changeColorTheme()}
 		class="mr-2 mt-2 text-xl"
+		aria-label="Theme switch"
 	>
 		{#if $themeStore === 'theme-light'}
 			<SolarSun2Bold />

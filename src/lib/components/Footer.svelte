@@ -20,7 +20,11 @@
 		</div>
 		<div class="flex w-1/2 flex-col md:w-1/4">
 			<h2 class="mb-1 text-xl md:mb-1.5">{$LL.FOOTER_EXPLORE()}</h2>
-			<a href="/" class="mb-2 transition duration-150 hover:text-brand_teal">
+			<a
+				href="/"
+				class="mb-2 transition duration-150 hover:text-brand_teal"
+				aria-label="Resources redirect"
+			>
 				{$LL.FOOTER_EXPLORE_RESOURCES()}
 			</a>
 		</div>
@@ -29,12 +33,14 @@
 			<a
 				href="/"
 				class="mb-1 transition duration-150 hover:text-brand_teal md:mb-2"
+				aria-label="ToS redirect"
 			>
 				{$LL.FOOTER_TOS()}
 			</a>
 			<a
 				href="/"
 				class="mb-1 transition duration-150 hover:text-brand_teal md:mb-2"
+				aria-label="Privacy redirect"
 			>
 				{$LL.FOOTER_PRIVACY()}
 			</a>
@@ -43,6 +49,7 @@
 			<h2 class="mb-1 text-xl md:mb-1.5">{$LL.FOOTER_COMPANY()}</h2>
 			<a
 				href="/"
+				aria-label="Contact form redirect"
 				class="mb-1 transition duration-150 hover:text-brand_teal md:mb-2"
 			>
 				{$LL.FOOTER_COMPANY_CONTACT()}
